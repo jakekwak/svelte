@@ -24,11 +24,7 @@ title: .svelte files
 
 ### 1. `export` creates a component prop
 
-<<<<<<< Updated upstream:site/content/docs/02-template-syntax/01-dot-svelte-files.md
-Svelte uses the `export` keyword to mark a variable declaration as a _property_ or _prop_, which means it becomes accessible to consumers of the component (see the section on [attributes and props](#attributes-and-props) for more information).
-=======
 Svelte는 'export' 키워드를 사용하여 변수 선언을 *property* 또는 *prop*로 표시합니다. 이는 구성 요소의 소비자가 액세스할 수 있음을 의미합니다(자세한 내용은 [attributes and props](/docs#template-syntax-attributes-and-props) 섹션 참조).
->>>>>>> Stashed changes:site/content/docs/02-component-format.md
 
 ```svelte
 <script>
@@ -40,17 +36,11 @@ Svelte는 'export' 키워드를 사용하여 변수 선언을 *property* 또는 
 </script>
 ```
 
-<<<<<<< Updated upstream:site/content/docs/02-template-syntax/01-dot-svelte-files.md
-You can specify a default initial value for a prop. It will be used if the component's consumer doesn't specify the prop on the component (or if its initial value is `undefined`) when instantiating the component. Note that whenever a prop is removed by the consumer, its value is set to `undefined` rather than the initial value.
-
-In development mode (see the [compiler options](/docs/svelte-compiler#svelte-compile)), a warning will be printed if no default initial value is provided and the consumer does not specify a value. To squelch this warning, ensure that a default initial value is specified, even if it is `undefined`.
-=======
 ---
 
 소품에 대한 기본 초기 값을 지정할 수 있습니다. 구성 요소를 인스턴스화할 때 구성 요소의 소비자가 구성 요소에 소품을 지정하지 않은 경우(또는 초기 값이 `undefined`인 경우) 사용됩니다. 소비자가 소품을 제거할 때마다 해당 값은 초기 값이 아닌 `undefined`으로 설정됩니다.
 
 개발 모드에서([컴파일러 옵션](/docs#compile-time-svelte-compile) 참조) 기본 초기 값이 제공되지 않고 소비자가 값을 지정하지 않으면 경고가 인쇄됩니다. 이 경고를 억제하려면 `undefined`인 경우에도 기본 초기 값이 지정되어 있는지 확인하십시오.
->>>>>>> Stashed changes:site/content/docs/02-component-format.md
 
 ```svelte
 <script>
@@ -59,13 +49,9 @@ In development mode (see the [compiler options](/docs/svelte-compiler#svelte-com
 </script>
 ```
 
-<<<<<<< Updated upstream:site/content/docs/02-template-syntax/01-dot-svelte-files.md
-If you export a `const`, `class` or `function`, it is readonly from outside the component. Functions are valid prop values, however, as shown below.
-=======
 ---
 
 `const`, `class` 또는 `function`을 내보내면 구성 요소 외부에서 읽기 전용입니다. 그러나 아래와 같이 함수는 유효한 prop 값입니다.
->>>>>>> Stashed changes:site/content/docs/02-component-format.md
 
 ```svelte
 <script>
@@ -81,13 +67,9 @@ If you export a `const`, `class` or `function`, it is readonly from outside the 
 </script>
 ```
 
-<<<<<<< Updated upstream:site/content/docs/02-template-syntax/01-dot-svelte-files.md
-Readonly props can be accessed as properties on the element, tied to the component using [`bind:this` syntax](/docs/component-directives#bind-this).
-=======
 읽기 전용 소품은 [`bind:this` 구문](/docs#template-syntax-component-directives-bind-this)을 사용하여 구성 요소에 연결된 요소의 속성으로 액세스할 수 있습니다.
 
 ---
->>>>>>> Stashed changes:site/content/docs/02-component-format.md
 
 예약어를 소품 이름으로 사용할 수 있습니다.
 
@@ -119,13 +101,9 @@ Readonly props can be accessed as properties on the element, tied to the compone
 </script>
 ```
 
-<<<<<<< Updated upstream:site/content/docs/02-template-syntax/01-dot-svelte-files.md
-Because Svelte's reactivity is based on assignments, using array methods like `.push()` and `.splice()` won't automatically trigger updates. A subsequent assignment is required to trigger the update. This and more details can also be found in the [tutorial](/tutorial/updating-arrays-and-objects).
-=======
 ---
 
 Svelte의 반응성은 할당을 기반으로 하기 때문에 `.push()` 및 `.splice()`와 같은 배열 메서드를 사용하면 업데이트가 자동으로 트리거되지 않습니다. 업데이트를 트리거하려면 후속 할당이 필요합니다. 이에 대한 자세한 내용은 [튜토리얼](/tutorial/updating-arrays-and-objects)에서도 확인할 수 있습니다.
->>>>>>> Stashed changes:site/content/docs/02-component-format.md
 
 ```svelte
 <script>
@@ -141,13 +119,9 @@ Svelte의 반응성은 할당을 기반으로 하기 때문에 `.push()` 및 `.s
 </script>
 ```
 
-<<<<<<< Updated upstream:site/content/docs/02-template-syntax/01-dot-svelte-files.md
-Svelte's `<script>` blocks are run only when the component is created, so assignments within a `<script>` block are not automatically run again when a prop updates. If you'd like to track changes to a prop, see the next example in the following section.
-=======
 ---
 
 Svelte의 `<script>` 블록은 구성 요소가 생성될 때만 실행되므로 `<script>` 블록 내의 할당은 prop이 업데이트될 때 자동으로 다시 실행되지 않습니다. 소품에 대한 변경 사항을 추적하려면 다음 섹션의 다음 예제를 참조하십시오.
->>>>>>> Stashed changes:site/content/docs/02-component-format.md
 
 ```svelte
 <script>
@@ -186,13 +160,9 @@ Svelte의 `<script>` 블록은 구성 요소가 생성될 때만 실행되므로
 </script>
 ```
 
-<<<<<<< Updated upstream:site/content/docs/02-template-syntax/01-dot-svelte-files.md
-Only values which directly appear within the `$:` block will become dependencies of the reactive statement. For example, in the code below `total` will only update when `x` changes, but not `y`.
-=======
 ---
 
 `$:` 블록 내에 직접 나타나는 값만 반응문의 종속성이 됩니다. 예를 들어 아래 코드에서 `x`가 변경될 때만 `total`은 업데이트되지만 `y`가 변경될 때는 업데이트되지 않습니다.
->>>>>>> Stashed changes:site/content/docs/02-component-format.md
 
 ```svelte
 <script>
@@ -239,13 +209,9 @@ It is important to note that the reactive blocks are ordered via simple static a
 
 `$: yDependent = y` 행을 `$: setY(x)` 아래로 이동하면 `x`가 업데이트될 때 `yDependent`도 업데이트됩니다.
 
-<<<<<<< Updated upstream:site/content/docs/02-template-syntax/01-dot-svelte-files.md
-If a statement consists entirely of an assignment to an undeclared variable, Svelte will inject a `let` declaration on your behalf.
-=======
 ---
 
 명령문이 선언되지 않은 변수에 대한 할당으로만 구성된 경우 Svelte는 사용자를 대신하여 `let` 선언을 삽입합니다.
->>>>>>> Stashed changes:site/content/docs/02-component-format.md
 
 ```svelte
 <script>
@@ -260,13 +226,9 @@ If a statement consists entirely of an assignment to an undeclared variable, Sve
 
 ### 4. Prefix stores with `$` to access their values
 
-<<<<<<< Updated upstream:site/content/docs/02-template-syntax/01-dot-svelte-files.md
-A _store_ is an object that allows reactive access to a value via a simple _store contract_. The [`svelte/store` module](/docs/svelte-store) contains minimal store implementations which fulfil this contract.
-=======
 ---
 
 *스토어*는 간단한 *스토어 계약*을 통해 값에 대한 반응적 액세스를 허용하는 개체입니다. [`svelte/store` 모듈](/docs#run-time-svelte-store)에는 이 계약을 이행하는 최소 저장소 구현이 포함되어 있습니다.
->>>>>>> Stashed changes:site/content/docs/02-component-format.md
 
 스토어에 대한 참조가 있을 때마다 `$` 문자를 접두어로 지정하여 구성 요소 내부의 값에 액세스할 수 있습니다. 이로 인해 Svelte는 접두사 변수를 선언하고 구성 요소 초기화 시 저장소를 구독하고 적절한 경우 구독을 취소합니다.
 
@@ -301,19 +263,11 @@ Local variables (that do not represent store values) must _not_ have a `$` prefi
 store = { subscribe: (subscription: (value: any) => void) => (() => void), set?: (value: any) => void }
 ```
 
-<<<<<<< Updated upstream:site/content/docs/02-template-syntax/01-dot-svelte-files.md
-You can create your own stores without relying on [`svelte/store`](/docs/svelte-store), by implementing the _store contract_:
-
-1. A store must contain a `.subscribe` method, which must accept as its argument a subscription function. This subscription function must be immediately and synchronously called with the store's current value upon calling `.subscribe`. All of a store's active subscription functions must later be synchronously called whenever the store's value changes.
-2. The `.subscribe` method must return an unsubscribe function. Calling an unsubscribe function must stop its subscription, and its corresponding subscription function must not be called again by the store.
-3. A store may _optionally_ contain a `.set` method, which must accept as its argument a new value for the store, and which synchronously calls all of the store's active subscription functions. Such a store is called a _writable store_.
-=======
 *스토어 계약*을 구현하여 [`svelte/store`](/docs#run-time-svelte-store)에 의존하지 않고 나만의 스토어를 만들 수 있습니다.
 
 1. 스토어는 구독 기능을 인수로 수락해야 하는 `.subscribe` 메서드를 포함해야 합니다. 이 구독 기능은 `.subscribe`를 호출할 때 상점의 현재 값으로 즉시 동기적으로 호출되어야 합니다. 상점의 모든 활성 구독 기능은 나중에 상점의 값이 변경될 때마다 동기적으로 호출되어야 합니다.
 2. `.subscribe` 메서드는 구독 취소 기능을 반환해야 합니다. 구독 취소 기능을 호출하면 구독이 중지되어야 하며 상점에서 해당 구독 기능을 다시 호출해서는 안 됩니다.
 3. 상점은 *선택적으로* `.set` 메소드를 포함할 수 있습니다. 이 메소드는 상점의 새 값을 인수로 수락해야 하며 상점의 모든 활성 구독 기능을 동기식으로 호출합니다. 이러한 저장소를 *쓰기 가능한 저장소*라고 합니다.
->>>>>>> Stashed changes:site/content/docs/02-component-format.md
 
 RxJS Observables와의 상호 운용성을 위해 `.subscribe` 메서드는 구독 취소 함수를 직접 반환하는 대신 `.unsubscribe` 메서드로 객체를 반환할 수도 있습니다. 그러나 `.subscribe`가 구독을 동기적으로 호출하지 않는 한(Observable 사양에 필요하지 않음) Svelte는 스토어 값을 `undefined`로 볼 수 있습니다.
 
@@ -325,11 +279,7 @@ RxJS Observables와의 상호 운용성을 위해 `.subscribe` 메서드는 구�
 
 기본 내보내기는 구성요소 자체이므로 `export default`를 할 수 없습니다.
 
-<<<<<<< Updated upstream:site/content/docs/02-template-syntax/01-dot-svelte-files.md
-> Variables defined in `module` scripts are not reactive — reassigning them will not trigger a rerender even though the variable itself will update. For values shared between multiple components, consider using a [store](/docs/svelte-store).
-=======
 > `module` 스크립트에 정의된 변수는 반응형이 아닙니다. 다시 할당해도 변수 자체가 업데이트되더라도 다시 렌더링되지 않습니다. 여러 구성요소 간에 공유되는 값의 경우 [store](/docs#run-time-svelte-store)를 사용하는 것이 좋습니다.
->>>>>>> Stashed changes:site/content/docs/02-component-format.md
 
 ```svelte
 <script context="module">
@@ -363,13 +313,9 @@ RxJS Observables와의 상호 운용성을 위해 `.subscribe` 메서드는 구�
 </style>
 ```
 
-<<<<<<< Updated upstream:site/content/docs/02-template-syntax/01-dot-svelte-files.md
-To apply styles to a selector globally, use the `:global(...)` modifier.
-=======
 ---
 
 전역적으로 선택기에 스타일을 적용하려면 `:global(...)` 한정자를 사용하세요.
->>>>>>> Stashed changes:site/content/docs/02-component-format.md
 
 ```svelte
 <style>
@@ -396,13 +342,9 @@ To apply styles to a selector globally, use the `:global(...)` modifier.
 </style>
 ```
 
-<<<<<<< Updated upstream:site/content/docs/02-template-syntax/01-dot-svelte-files.md
-If you want to make @keyframes that are accessible globally, you need to prepend your keyframe names with `-global-`.
-=======
 ---
 
 전역적으로 액세스할 수 있는 @keyframe을 만들려면 키프레임 이름 앞에 `-global-`을 추가해야 합니다.
->>>>>>> Stashed changes:site/content/docs/02-component-format.md
 
 `-global-` 부분은 컴파일 시 제거되며 키프레임은 코드의 다른 위치에서 `my-animation-name`만 사용하여 참조됩니다.
 
@@ -414,13 +356,9 @@ If you want to make @keyframes that are accessible globally, you need to prepend
 </style>
 ```
 
-<<<<<<< Updated upstream:site/content/docs/02-template-syntax/01-dot-svelte-files.md
-There should only be 1 top-level `<style>` tag per component.
-=======
 ---
 
 구성 요소당 최상위 수준 `<style>` 태그는 1개만 있어야 합니다.
->>>>>>> Stashed changes:site/content/docs/02-component-format.md
 
 그러나 `<style>` 태그가 다른 요소나 논리 블록 내에 중첩될 수 있습니다.
 

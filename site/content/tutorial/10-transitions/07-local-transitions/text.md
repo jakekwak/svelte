@@ -6,11 +6,7 @@ title: Local transitions
 
 대신 개별 항목이 추가되고 제거될 때만 전환이 재생되기를 원합니다. 즉, 사용자가 슬라이더를 드래그할 때입니다.
 
-<<<<<<< Updated upstream
-We can achieve this with a _local_ transition, which only plays when the block with the transition itself is added or removed:
-=======
 전환 자체가 있는 블록이 추가되거나 제거될 때만 재생되는 *로컬* 전환으로 이를 달성할 수 있습니다.
->>>>>>> Stashed changes
 
 ```svelte
 <div transition:slide|local>

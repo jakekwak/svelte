@@ -10,8 +10,4 @@ title: <svelte:head>
 </svelte:head>
 ```
 
-<<<<<<< Updated upstream
-> In server-side rendering (SSR) mode, contents of `<svelte:head>` are returned separately from the rest of your HTML.
-=======
 > SSR(서버측 렌더링) 모드에서 `<svelte:head>`의 내용은 나머지 HTML과 별도로 반환됩니다.
->>>>>>> Stashed changes

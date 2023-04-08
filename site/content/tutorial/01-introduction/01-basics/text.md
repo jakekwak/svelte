@@ -4,12 +4,8 @@ title: Basics
 
 Svelte 튜토리얼에 오신 것을 환영합니다. 이것은 빠르고 작은 웹 애플리케이션을 쉽게 구축하기 위해 알아야 할 모든 것을 알려줄 것입니다.
 
-<<<<<<< Updated upstream
-You can also consult the [API docs](/docs) and the [examples](/examples), or — if you're impatient to start hacking on your machine locally — the [60-second quickstart](/docs/introduction).
-=======
 또한 [API 문서](/docs) 및 [예제](/examples)를 참조할 수도 있습니다. 또는 로컬 컴퓨터에서 해킹을 시작하고 싶지 않은 경우 [60초 빠른 시작](/docs#getting-started)를 참조하세요.
 
->>>>>>> Stashed changes
 
 ## Svelte란?
 
@@ -17,20 +13,12 @@ Svelte는 빠른 웹 애플리케이션을 구축하기 위한 도구입니다.
 
 매끄러운 대화형 사용자 인터페이스를 쉽게 구축할 수 있도록 하는 목표를 공유하는 React 및 Vue와 같은 JavaScript 프레임워크와 유사합니다.
 
-<<<<<<< Updated upstream
-But there's a crucial difference: Svelte converts your app into ideal JavaScript at _build time_, rather than interpreting your application code at _run time_. This means you don't pay the performance cost of the framework's abstractions, and you don't incur a penalty when your app first loads.
-=======
 그러나 결정적인 차이점이 있습니다. Svelte는 *실행 시간*에 애플리케이션 코드를 해석하는 대신 *빌드 시간*에 앱을 이상적인 JavaScript로 변환합니다. 즉, 프레임워크 추상화의 성능 비용을 지불하지 않으며 앱이 처음 로드될 때 패널티가 발생하지 않습니다.
->>>>>>> Stashed changes
 
 Svelte로 전체 앱을 빌드하거나 기존 코드베이스에 점진적으로 추가할 수 있습니다. 기존 프레임워크에 대한 의존성 오버헤드 없이 어디서나 작동하는 독립 실행형 패키지로 구성 요소를 제공할 수도 있습니다.
 
-<<<<<<< Updated upstream
-## How to use this tutorial
-=======
 
 ## 이 튜토리얼을 사용하는 방법
->>>>>>> Stashed changes
 
 Svelte를 이해하려면 HTML, CSS 및 JavaScript에 대한 기본적인 지식이 있어야 합니다.
 
@@ -38,13 +26,7 @@ Svelte를 이해하려면 HTML, CSS 및 JavaScript에 대한 기본적인 지식
 
 각 자습서 장에는 지침을 따라가는 데 어려움이 있는 경우 클릭할 수 있는 '보여주기' 버튼이 있습니다. 그것에 너무 의존하지 마십시오. 제안된 각 코드 블록을 넣을 위치를 파악하고 편집기에 수동으로 입력하면 더 빨리 배울 수 있습니다.
 
-<<<<<<< Updated upstream
-## Understanding components
-
-In Svelte, an application is composed from one or more _components_. A component is a reusable self-contained block of code that encapsulates HTML, CSS and JavaScript that belong together, written into a `.svelte` file. The 'hello world' example in the code editor is a simple component.
-=======
 
 ## 구성 요소 이해
 
 Svelte에서 애플리케이션은 하나 이상의 *구성 요소*로 구성됩니다. 구성 요소는 함께 속해 있는 HTML, CSS 및 JavaScript를 캡슐화하여 `.svelte` 파일에 기록되는 재사용 가능한 자체 포함 코드 블록입니다. 코드 편집기의 'hello world' 예제는 간단한 구성 요소입니다.
->>>>>>> Stashed changes

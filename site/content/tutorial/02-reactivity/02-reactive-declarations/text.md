@@ -17,8 +17,4 @@ $: doubled = count * 2;
 <p>{count} doubled is {doubled}</p>
 ```
 
-<<<<<<< Updated upstream
-Of course, you could just write `{count * 2}` in the markup instead — you don't have to use reactive values. Reactive values become particularly valuable when you need to reference them multiple times, or you have values that depend on _other_ reactive values.
-=======
 물론 대신 마크업에 `{count * 2}`를 작성할 수 있습니다. 반응형 값을 사용할 필요가 없습니다. 반응형 값은 여러 번 참조해야 하거나 *다른* 반응형 값에 의존하는 값이 있을 때 특히 유용합니다.
->>>>>>> Stashed changes

@@ -2,11 +2,7 @@
 title: Await blocks
 ---
 
-<<<<<<< Updated upstream
-Most web applications have to deal with asynchronous data at some point. Svelte makes it easy to _await_ the value of [promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) directly in your markup:
-=======
 대부분의 웹 애플리케이션은 어느 시점에서 비동기 데이터를 처리해야 합니다. Svelte를 사용하면 마크업에서 직접 [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)의 값을 *await*하기 쉽습니다:
->>>>>>> Stashed changes
 
 ```svelte
 {#await promise}

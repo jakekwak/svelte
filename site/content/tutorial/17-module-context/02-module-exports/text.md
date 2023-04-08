@@ -30,8 +30,4 @@ title: Exports
 <button on:click={stopAll}> stop all audio </button>
 ```
 
-<<<<<<< Updated upstream
-> You can't have a default export, because the component _is_ the default export.
-=======
 > 구성 요소가 기본 내보내기 *이므로* 기본 내보내기를 가질 수 없습니다.
->>>>>>> Stashed changes

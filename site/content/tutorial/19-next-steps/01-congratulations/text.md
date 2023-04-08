@@ -4,11 +4,7 @@ title: Congratulations!
 
 이제 Svelte 튜토리얼을 마쳤으며 앱 빌드를 시작할 준비가 되었습니다. 언제든지 개별 장을 다시 참조하거나(위의 제목을 클릭하면 드롭다운이 표시됨) [API 참조](/docs), [예제](/예제) 및 [블로그](/blog)를 통해 학습을 계속할 수 있습니다. . Twitter 사용자인 경우 [@sveltejs](https://twitter.com/sveltejs)를 통해 업데이트를 받을 수 있습니다.
 
-<<<<<<< Updated upstream
-To get set up in your local development environment, check out [the quickstart guide](/docs/introduction).
-=======
 로컬 개발 환경에서 설정하려면 [빠른 시작 가이드](/docs#getting-started)를 확인하세요.
->>>>>>> Stashed changes
 
 라우팅, 서버 측 렌더링 및 기타 모든 것을 포함하는 보다 광범위한 프레임워크를 찾고 있다면 [SvelteKit](https://kit.svelte.dev)를 살펴보십시오.
 

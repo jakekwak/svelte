@@ -28,11 +28,7 @@ export function longpress(node, duration) {
 <button use:longpress={duration}
 ```
 
-<<<<<<< Updated upstream
-This _almost_ works — the event now only fires after 2 seconds. But if you slide the duration down, it will still take two seconds.
-=======
 이것은 *거의* 작동합니다. 이제 이벤트는 2초 후에만 시작됩니다. 그러나 지속 시간을 아래로 슬라이드해도 여전히 2초가 걸립니다.
->>>>>>> Stashed changes
 
 이를 변경하기 위해 `longpress.js`에 `update` 메서드를 추가할 수 있습니다. 인수가 변경될 때마다 호출됩니다.
 
@@ -45,8 +41,4 @@ return {
 };
 ```
 
-<<<<<<< Updated upstream
-> If you need to pass multiple arguments to an action, combine them into a single object, as in `use:longpress={{duration, spiciness}}`
-=======
 > 작업에 여러 인수를 전달해야 하는 경우 `use:longpress={{duration, spiciness}}`와 같이 단일 개체로 결합합니다.
->>>>>>> Stashed changes

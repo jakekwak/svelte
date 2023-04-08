@@ -20,8 +20,4 @@ title: Adding data
 <h1>Hello {name}!</h1>
 ```
 
-<<<<<<< Updated upstream
-Inside the curly braces, we can put any JavaScript we want. Try changing `name` to `name.toUpperCase()` for a shoutier greeting.
-=======
 중괄호 안에 원하는 JavaScript를 넣을 수 있습니다. 더 큰 소리로 인사하려면 `name`을 `name.toUpperCase()`로 변경해 보세요.
->>>>>>> Stashed changes

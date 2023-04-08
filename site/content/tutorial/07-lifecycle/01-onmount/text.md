@@ -2,11 +2,7 @@
 title: onMount
 ---
 
-<<<<<<< Updated upstream
-Every component has a _lifecycle_ that starts when it is created, and ends when it is destroyed. There are a handful of functions that allow you to run code at key moments during that lifecycle.
-=======
 모든 구성 요소에는 생성될 때 시작하여 파괴될 때 끝나는 *수명 주기*가 있습니다. 수명 주기 동안 중요한 순간에 코드를 실행할 수 있는 몇 가지 기능이 있습니다.
->>>>>>> Stashed changes
 
 가장 자주 사용하게 될 것은 `onMount`로 구성 요소가 처음 DOM에 렌더링된 후에 실행됩니다. 렌더링된 후 `<canvas>` 요소와 상호 작용해야 할 때 [이전에](/tutorial/bind-this) 잠시 만났습니다.
 
@@ -29,8 +25,4 @@ Every component has a _lifecycle_ that starts when it is created, and ends when 
 
 콜백이 `setTimeout`이 아닌 구성 요소 인스턴스에 바인딩되도록 구성 요소가 초기화되는 동안 수명 주기 함수를 호출해야 합니다.
 
-<<<<<<< Updated upstream
-If the `onMount` callback returns a function, that function will be called when the component is destroyed.
-=======
 `onMount` 콜백이 함수를 반환하는 경우 구성 요소가 소멸될 때 해당 함수가 호출됩니다.
->>>>>>> Stashed changes

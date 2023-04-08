@@ -2,11 +2,7 @@
 title: Event forwarding
 ---
 
-<<<<<<< Updated upstream
-Unlike DOM events, component events don't _bubble_. If you want to listen to an event on some deeply nested component, the intermediate components must _forward_ the event.
-=======
 DOM 이벤트와 달리 구성 요소 이벤트는 *버블링*하지 않습니다. 깊이 중첩된 일부 구성 요소에서 이벤트를 수신하려면 중간 구성 요소가 이벤트를 *전달(forward)*해야 합니다.
->>>>>>> Stashed changes
 
 이 경우 [이전 장](/tutorial/component-events)에서와 동일한 `App.svelte` 및 `Inner.svelte`가 있지만 이제 `<Inner/>`를 포함하는 `Outer.svelte` 구성 요소가 있습니다.
 

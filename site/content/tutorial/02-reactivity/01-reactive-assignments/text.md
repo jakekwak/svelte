@@ -2,11 +2,7 @@
 title: Assignments
 ---
 
-<<<<<<< Updated upstream
-At the heart of Svelte is a powerful system of _reactivity_ for keeping the DOM in sync with your application state — for example, in response to an event.
-=======
 Svelte의 중심에는 예를 들어 이벤트에 대한 응답으로 DOM을 애플리케이션 상태와 동기화 상태로 유지하기 위한 강력한 *반응성* 시스템이 있습니다.
->>>>>>> Stashed changes
 
 이를 시연하려면 먼저 이벤트 핸들러를 연결해야 합니다. 9행을 다음과 같이 바꿉니다.
 

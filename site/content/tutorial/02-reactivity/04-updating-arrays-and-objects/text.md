@@ -25,11 +25,7 @@ function addNumber() {
 
 `pop`, `shift` 및 `splice`와 같은 배열 방법과 `Map.set`, `Set.add` 등과 같은 객체 방법에도 동일한 규칙이 적용됩니다.
 
-<<<<<<< Updated upstream
-Assignments to _properties_ of arrays and objects — e.g. `obj.foo += 1` or `array[i] = x` — work the same way as assignments to the values themselves.
-=======
 배열 및 객체의 *속성*에 할당 — 예: `obj.foo += 1` 또는 `array[i] = x` — 값 자체에 대한 할당과 동일한 방식으로 작동합니다.
->>>>>>> Stashed changes
 
 ```js
 function addNumber() {
@@ -44,11 +40,7 @@ const foo = obj.foo;
 foo.bar = 'baz';
 ```
 
-<<<<<<< Updated upstream
-or
-=======
 또는
->>>>>>> Stashed changes
 
 ```js
 function quox(thing) {

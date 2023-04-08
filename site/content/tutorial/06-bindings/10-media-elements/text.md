@@ -28,24 +28,6 @@ title: Media elements
 
 > 일반적으로 웹에서는 `timeupdate` 이벤트를 수신하여 `currentTime`을 추적합니다. 그러나 이러한 이벤트는 너무 드물게 실행되어 고르지 못한 UI가 발생합니다. Svelte가 더 좋습니다. `requestAnimationFrame`을 사용하여 `currentTime`을 확인합니다.
 
-<<<<<<< Updated upstream
-The complete set of bindings for `<audio>` and `<video>` is as follows — six _readonly_ bindings...
-
-- `duration` (readonly) — the total duration of the video, in seconds
-- `buffered` (readonly) — an array of `{start, end}` objects
-- `seekable` (readonly) — ditto
-- `played` (readonly) — ditto
-- `seeking` (readonly) — boolean
-- `ended` (readonly) — boolean
-
-...and five _two-way_ bindings:
-
-- `currentTime` — the current point in the video, in seconds
-- `playbackRate` — how fast to play the video, where `1` is 'normal'
-- `paused` — this one should be self-explanatory
-- `volume` — a value between 0 and 1
-- `muted` — a boolean value where true is muted
-=======
 `<audio>` 및 `<video>`에 대한 전체 바인딩 세트는 다음과 같습니다 — 6개의 *읽기 전용* 바인딩...
 
 * `duration` (readonly) — 비디오의 총 재생 시간(초)
@@ -62,6 +44,5 @@ The complete set of bindings for `<audio>` and `<video>` is as follows — six _
 * `paused` — 설명이 필요하지 않습니다.
 * `volume` — 0과 1 사이의 값
 * `muted` — true가 음소거된 부울 값
->>>>>>> Stashed changes
 
 비디오에는 읽기 전용 `videoWidth` 및 `videoHeight` 바인딩이 추가로 있습니다.

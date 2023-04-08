@@ -2,11 +2,7 @@
 title: Named slots
 ---
 
-<<<<<<< Updated upstream
-The previous example contained a _default slot_, which renders the direct children of a component. Sometimes you will need more control over placement, such as with this `<ContactCard>`. In those cases, we can use _named slots_.
-=======
 이전 예제에는 구성 요소의 직계 자식을 렌더링하는 *기본 슬롯*이 포함되어 있습니다. 이 `<ContactCard>`와 같이 배치에 대한 더 많은 제어가 필요한 경우가 있습니다. 이러한 경우 *명명된 슬롯*을 사용할 수 있습니다.
->>>>>>> Stashed changes
 
 `ContactCard.svelte`에서 각 슬롯에 `name` 속성을 추가합니다.
 

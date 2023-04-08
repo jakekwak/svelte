@@ -2,11 +2,7 @@
 title: Deferred transitions
 ---
 
-<<<<<<< Updated upstream
-A particularly powerful feature of Svelte's transition engine is the ability to _defer_ transitions, so that they can be coordinated between multiple elements.
-=======
 Svelte 전환 엔진의 특히 강력한 기능은 전환을 *연기*하는 기능으로, 여러 요소 간에 조정될 수 있습니다.
->>>>>>> Stashed changes
 
 할일을 토글하면 반대 목록으로 보내는 이 할일 목록 쌍을 가져옵니다. 현실 세계에서 개체는 그렇게 작동하지 않습니다. 사라지고 다른 위치에서 다시 나타나는 대신 일련의 중간 위치를 통해 이동합니다. 모션을 사용하면 사용자가 앱에서 일어나는 일을 이해하는 데 큰 도움이 될 수 있습니다.
 
@@ -31,8 +27,4 @@ Svelte 전환 엔진의 특히 강력한 기능은 전환을 *연기*하는 기�
 >
 ```
 
-<<<<<<< Updated upstream
-Now, when you toggle items, they move smoothly to their new location. The non-transitioning items still jump around awkwardly — we can fix that in the next chapter.
-=======
 이제 항목을 전환하면 새 위치로 부드럽게 이동합니다. 전환되지 않는 항목은 여전히 어색하게 이동합니다. 다음 장에서 수정할 수 있습니다.
->>>>>>> Stashed changes

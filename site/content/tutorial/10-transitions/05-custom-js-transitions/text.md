@@ -17,13 +17,8 @@ function typewriter(node, { speed = 1 }) {
 
 	return {
 		duration,
-<<<<<<< Updated upstream
 		tick: (t) => {
 			const i = Math.trunc(text.length * t);
-=======
-		tick: t => {
-			const i = Math.trunc(text.length * t); // ~~(text.length * t)
->>>>>>> Stashed changes
 			node.textContent = text.slice(0, i);
 		}
 	};

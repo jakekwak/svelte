@@ -16,8 +16,4 @@ HTML에서와 마찬가지로 컴포넌트에 `<style>` 태그를 추가할 수 
 </style>
 ```
 
-<<<<<<< Updated upstream
-Importantly, these rules are _scoped to the component_. You won't accidentally change the style of `<p>` elements elsewhere in your app, as we'll see in the next step.
-=======
 중요한 것은 이러한 규칙이 *구성 요소로 범위가 지정된다는 것입니다*. 다음 단계에서 볼 수 있듯이 앱의 다른 위치에서 `<p>` 요소의 스타일을 실수로 변경하지 않습니다.
->>>>>>> Stashed changes

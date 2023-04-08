@@ -6,11 +6,7 @@ title: setContext and getContext
 
 [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/overview/) 지도를 사용하는 이 예시 앱을 살펴보세요. `<MapMarker>` 구성 요소를 사용하여 마커를 표시하고 싶지만 기본 Mapbox 인스턴스에 대한 참조를 각 구성 요소의 소품으로 전달하고 싶지는 않습니다.
 
-<<<<<<< Updated upstream
-There are two halves to the context API — `setContext` and `getContext`. If a component calls `setContext(key, context)`, then any _child_ component can retrieve the context with `const context = getContext(key)`.
-=======
 컨텍스트 API에는 `setContext`와 `getContext`라는 두 부분이 있습니다. 구성 요소가 `setContext(key, context)`를 호출하면 모든 *자식* 구성 요소가 `const context = getContext(key)`로 컨텍스트를 검색할 수 있습니다.
->>>>>>> Stashed changes
 
 먼저 컨텍스트를 설정해 보겠습니다. `Map.svelte`에서 `svelte`에서 `setContext`를 가져오고 `mapbox.js`에서 `key`를 가져오고 `setContext`를 호출합니다.
 
@@ -51,11 +47,7 @@ const key = Symbol();
 
 ## Contexts vs. stores
 
-<<<<<<< Updated upstream
-Contexts and stores seem similar. They differ in that stores are available to _any_ part of an app, while a context is only available to _a component and its descendants_. This can be helpful if you want to use several instances of a component without the state of one interfering with the state of the others.
-=======
 컨텍스트와 스토어는 비슷해 보입니다. 저장소는 앱의 *모든* 부분에서 사용할 수 있는 반면 컨텍스트는 *구성 요소와 해당 하위 항목*에서만 사용할 수 있다는 점에서 다릅니다. 이것은 하나의 상태가 다른 것의 상태를 방해하지 않고 구성 요소의 여러 인스턴스를 사용하려는 경우에 유용할 수 있습니다.
->>>>>>> Stashed changes
 
 실제로 두 가지를 함께 사용할 수도 있습니다. 컨텍스트는 반응적이지 않으므로 시간이 지남에 따라 변경되는 값은 저장소로 표시되어야 합니다.
 

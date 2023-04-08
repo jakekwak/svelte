@@ -2,15 +2,9 @@
 title: Slot props
 ---
 
-<<<<<<< Updated upstream
-In this app, we have a `<Hoverable>` component that tracks whether the mouse is currently over it. It needs to pass that data _back_ to the parent component, so that we can update the slotted contents.
-
-For this, we use _slot props_. In `Hoverable.svelte`, pass the `hovering` value into the slot:
-=======
 이 앱에는 마우스가 현재 위에 있는지 추적하는 `<Hoverable>` 구성 요소가 있습니다. 슬롯 콘텐츠를 업데이트할 수 있도록 해당 데이터를 상위 구성 요소로 *다시* 전달해야 합니다.
 
 이를 위해 *슬롯 소품*을 사용합니다. `Hoverable.svelte`에서 `hovering` 값을 슬롯에 전달합니다.
->>>>>>> Stashed changes
 
 <!-- prettier-ignore -->
 ```svelte

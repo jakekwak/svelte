@@ -15,11 +15,7 @@ title: Dynamic attributes
 
 > A11y: &lt;img&gt; 요소에는 alt 속성이 있어야 합니다.
 
-<<<<<<< Updated upstream
-When building web apps, it's important to make sure that they're _accessible_ to the broadest possible userbase, including people with (for example) impaired vision or motion, or people without powerful hardware or good internet connections. Accessibility (shortened to a11y) isn't always easy to get right, but Svelte will help by warning you if you write inaccessible markup.
-=======
 웹 앱을 구축할 때 (예를 들어) 시각 또는 동작 장애가 있는 사람 또는 강력한 하드웨어나 양호한 인터넷 연결이 없는 사람을 포함하여 가능한 가장 광범위한 사용자 기반이 웹 앱에 *액세스할 수* 있는지 확인하는 것이 중요합니다. 접근성(a11y로 줄임)이 항상 올바른 것은 아니지만 접근할 수 없는 마크업을 작성하면 Svelte가 경고하여 도움을 줍니다.
->>>>>>> Stashed changes
 
 이 경우 스크린 리더를 사용하는 사람이나 이미지를 다운로드할 수 없는 인터넷 연결이 느리거나 불안정한 사람을 위해 이미지를 설명하는 'alt' 속성이 누락되었습니다. 하나를 추가해 보겠습니다.
 
@@ -28,11 +24,7 @@ When building web apps, it's important to make sure that they're _accessible_ to
 <img src={src} alt="A man dances." />
 ```
 
-<<<<<<< Updated upstream
-We can use curly braces _inside_ attributes. Try changing it to `"{name} dances."` — remember to declare a `name` variable in the `<script>` block.
-=======
 중괄호 *내부* 속성을 사용할 수 있습니다. `"{name} dances"`로 변경해 보세요. -`<script>` 블록에서 `name` 변수를 선언하는 것을 잊지 마십시오.
->>>>>>> Stashed changes
 
 ## Shorthand attributes
 

@@ -18,11 +18,7 @@ title: Each blocks
 
 > 표현식(이 경우 `cats`)은 배열 또는 배열과 유사한 객체(즉 `length` 속성이 있음)가 될 수 있습니다. `each [...iterable]`을 사용하여 일반 이터러블을 반복할 수 있습니다.
 
-<<<<<<< Updated upstream
-You can get the current _index_ as a second argument, like so:
-=======
 다음과 같이 현재 *인덱스*를 두 번째 인수로 가져올 수 있습니다.
->>>>>>> Stashed changes
 
 ```svelte
 {#each cats as cat, i}

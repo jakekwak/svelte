@@ -29,8 +29,4 @@ let coords = spring(
 
 마우스를 움직이고 슬라이더를 드래그하여 스프링의 동작에 어떤 영향을 미치는지 느껴보십시오. 스프링이 움직이는 동안 값을 조정할 수 있습니다.
 
-<<<<<<< Updated upstream
-Consult the [API reference](/docs/svelte-motion#spring) for more information.
-=======
 자세한 내용은 [API 참조](/docs#run-time-svelte-motion-spring)를 참조하세요.
->>>>>>> Stashed changes

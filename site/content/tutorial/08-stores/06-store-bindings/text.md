@@ -18,8 +18,4 @@ title: Store bindings
 <button on:click={() => ($name += '!')}> Add exclamation mark! </button>
 ```
 
-<<<<<<< Updated upstream
-The `$name += '!'` assignment is equivalent to `name.set($name + '!')`.
-=======
 `$name += '!'` 할당은 `name.set($name + '!')`과 동일합니다.
->>>>>>> Stashed changes

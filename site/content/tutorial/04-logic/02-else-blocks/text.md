@@ -12,8 +12,4 @@ title: Else blocks
 {/if}
 ```
 
-<<<<<<< Updated upstream
-> A `#` character always indicates a _block opening_ tag. A `/` character always indicates a _block closing_ tag. A `:` character, as in `{:else}`, indicates a _block continuation_ tag. Don't worry — you've already learned almost all the syntax Svelte adds to HTML.
-=======
 > `#` 문자는 항상 *블록 열기* 태그를 나타냅니다. `/` 문자는 항상 *블록 닫기* 태그를 나타냅니다. `{:else}`와 같은 `:` 문자는 *블록 연속* 태그를 나타냅니다. 걱정하지 마십시오. 이미 Svelte가 HTML에 추가하는 거의 모든 구문을 배웠습니다.
->>>>>>> Stashed changes

@@ -14,8 +14,4 @@ import { fade, fly } from 'svelte/transition';
 <p in:fly={{ y: 200, duration: 2000 }} out:fade>Flies in, fades out</p>
 ```
 
-<<<<<<< Updated upstream
-In this case, the transitions are _not_ reversed.
-=======
 이 경우 전환이 반전되지 *않습니다*.
->>>>>>> Stashed changes

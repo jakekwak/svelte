@@ -17,8 +17,4 @@ title: Adding parameters
 <p transition:fly={{ y: 200, duration: 2000 }}>Flies in and out</p>
 ```
 
-<<<<<<< Updated upstream
-Note that the transition is _reversible_ — if you toggle the checkbox while the transition is ongoing, it transitions from the current point, rather than the beginning or the end.
-=======
 전환은 *되돌릴 수 있음*에 유의하십시오. 전환이 진행되는 동안 확인란을 전환하면 시작이나 끝이 아닌 현재 지점에서 전환됩니다.
->>>>>>> Stashed changes

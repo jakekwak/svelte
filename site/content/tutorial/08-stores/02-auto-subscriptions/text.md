@@ -2,11 +2,7 @@
 title: Auto-subscriptions
 ---
 
-<<<<<<< Updated upstream
-The app in the previous example works, but there's a subtle bug — the store is subscribed to, but never unsubscribed. If the component was instantiated and destroyed many times, this would result in a _memory leak_.
-=======
 이전 예제의 앱은 작동하지만 미묘한 버그가 있습니다. 스토어가 구독되지만 구독 취소되지는 않습니다. 구성 요소가 인스턴스화되고 여러 번 제거되면 *메모리 누수*가 발생합니다.
->>>>>>> Stashed changes
 
 `App.svelte`에서 `unsubscribe`를 선언하여 시작합니다.
 
@@ -15,12 +11,7 @@ const unsubscribe = count.subscribe((value) => {
 	countValue = value;
 });
 ```
-<<<<<<< Updated upstream
-
-> Calling a `subscribe` method returns an `unsubscribe` function.
-=======
 > `subscribe` 메서드를 호출하면 `unsubscribe` 함수가 반환됩니다.
->>>>>>> Stashed changes
 
 이제 `unsubscribe`를 선언했지만 예를 들어 `onDestroy` [수명 주기 후크](/tutorial/ondestroy)를 통해 호출해야 합니다.
 

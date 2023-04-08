@@ -29,8 +29,4 @@ let menu = ['Cookies and cream', 'Mint choc chip', 'Raspberry ripple'];
 {/each}
 ```
 
-<<<<<<< Updated upstream
-It's now easy to expand our ice cream menu in new and exciting directions.
-=======
 이제 새롭고 흥미로운 방향으로 아이스크림 메뉴를 쉽게 확장할 수 있습니다.
->>>>>>> Stashed changes

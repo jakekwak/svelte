@@ -20,8 +20,4 @@ title: <svelte:element>
 <svelte:element this={selected}>I'm a {selected} tag</svelte:element>
 ```
 
-<<<<<<< Updated upstream
-The `this` value can be any string, or a falsy value — if it's falsy, no element is rendered.
-=======
 `this` 값은 임의의 문자열이거나 거짓 값일 수 있습니다 — 거짓이면 요소가 렌더링되지 않습니다.
->>>>>>> Stashed changes

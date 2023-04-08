@@ -20,8 +20,4 @@ title: <svelte:component>
 <svelte:component this={selected.component} />
 ```
 
-<<<<<<< Updated upstream
-The `this` value can be any component constructor, or a falsy value — if it's falsy, no component is rendered.
-=======
 `this` 값은 구성 요소 생성자 또는 거짓 값일 수 있습니다 — 거짓이면 구성 요소가 렌더링되지 않습니다.
->>>>>>> Stashed changes

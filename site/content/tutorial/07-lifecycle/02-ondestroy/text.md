@@ -17,11 +17,7 @@ title: onDestroy
 </script>
 ```
 
-<<<<<<< Updated upstream
-While it's important to call lifecycle functions during the component's initialisation, it doesn't matter _where_ you call them from. So if we wanted, we could abstract the interval logic into a helper function in `utils.js`...
-=======
 구성 요소를 초기화하는 동안 수명 주기 함수를 호출하는 것이 중요하지만 함수를 호출하는 *어디서*는 중요하지 않습니다. 그래서 원한다면 `utils.js`의 도우미 함수로 간격 논리를 추상화할 수 있습니다...
->>>>>>> Stashed changes
 
 ```js
 import { onDestroy } from 'svelte';

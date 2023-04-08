@@ -10,17 +10,6 @@ title: <svelte:window> bindings
 
 바인딩할 수 있는 속성 목록은 다음과 같습니다.
 
-<<<<<<< Updated upstream
-- `innerWidth`
-- `innerHeight`
-- `outerWidth`
-- `outerHeight`
-- `scrollX`
-- `scrollY`
-- `online` — an alias for `window.navigator.onLine`
-
-All except `scrollX` and `scrollY` are readonly.
-=======
 * `innerWidth`
 * `innerHeight`
 * `outerWidth`
@@ -30,4 +19,3 @@ All except `scrollX` and `scrollY` are readonly.
 * `online` — `window.navigator.onLine`의 별칭
 
 `scrollX` 및 `scrollY`를 제외한 모든 항목은 읽기 전용입니다.
->>>>>>> Stashed changes

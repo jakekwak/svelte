@@ -4,11 +4,7 @@ title: <svelte:self>
 
 Svelte는 다양한 내장 요소를 제공합니다. 첫 번째 `<svelte:self>`는 컴포넌트가 재귀적으로 자신을 포함하도록 허용합니다.
 
-<<<<<<< Updated upstream
-It's useful for things like this folder tree view, where folders can contain _other_ folders. In `Folder.svelte` we want to be able to do this...
-=======
 폴더가 *기타* 폴더를 포함할 수 있는 이 폴더 트리 보기와 같은 항목에 유용합니다. `Folder.svelte`에서 우리는 이것을 할 수 있기를 원합니다...
->>>>>>> Stashed changes
 
 ```svelte
 {#if file.files}
