@@ -2,19 +2,23 @@
 title: Declarations
 ---
 
-Svelte's reactivity not only keeps the DOM in sync with your application's variables as shown in the previous section, it can also keep variables in sync with each other using reactive declarations. They look like this:
+Svelte의 반응성은 이전 섹션에 표시된 것처럼 DOM을 애플리케이션의 변수와 동기화 상태로 유지할 뿐만 아니라 반응 선언을 사용하여 변수를 서로 동기화 상태로 유지할 수도 있습니다. 그들은 다음과 같이 보입니다:
 
 ```js
 let count = 0;
 $: doubled = count * 2;
 ```
 
-> Don't worry if this looks a little alien. It's [valid](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label) (if unconventional) JavaScript, which Svelte interprets to mean 're-run this code whenever any of the referenced values change'. Once you get used to it, there's no going back.
+> 조금 낯설게 보이더라도 걱정하지 마세요. 그것은 [유효한](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label)(틀에 얽매이지 않는 경우) JavaScript입니다. Svelte는 '참조된 값이 변경될 때마다 이 코드를 다시 실행'하는 의미로 해석합니다. 익숙해지면 되돌릴 수 없습니다.
 
-Let's use `doubled` in our markup:
+마크업에서 `doubled`를 사용합시다:
 
 ```svelte
 <p>{count} doubled is {doubled}</p>
 ```
 
+<<<<<<< Updated upstream
 Of course, you could just write `{count * 2}` in the markup instead — you don't have to use reactive values. Reactive values become particularly valuable when you need to reference them multiple times, or you have values that depend on _other_ reactive values.
+=======
+물론 대신 마크업에 `{count * 2}`를 작성할 수 있습니다. 반응형 값을 사용할 필요가 없습니다. 반응형 값은 여러 번 참조해야 하거나 *다른* 반응형 값에 의존하는 값이 있을 때 특히 유용합니다.
+>>>>>>> Stashed changes

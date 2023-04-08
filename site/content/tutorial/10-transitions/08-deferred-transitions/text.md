@@ -2,13 +2,17 @@
 title: Deferred transitions
 ---
 
+<<<<<<< Updated upstream
 A particularly powerful feature of Svelte's transition engine is the ability to _defer_ transitions, so that they can be coordinated between multiple elements.
+=======
+Svelte 전환 엔진의 특히 강력한 기능은 전환을 *연기*하는 기능으로, 여러 요소 간에 조정될 수 있습니다.
+>>>>>>> Stashed changes
 
-Take this pair of todo lists, in which toggling a todo sends it to the opposite list. In the real world, objects don't behave like that — instead of disappearing and reappearing in another place, they move through a series of intermediate positions. Using motion can go a long way towards helping users understand what's happening in your app.
+할일을 토글하면 반대 목록으로 보내는 이 할일 목록 쌍을 가져옵니다. 현실 세계에서 개체는 그렇게 작동하지 않습니다. 사라지고 다른 위치에서 다시 나타나는 대신 일련의 중간 위치를 통해 이동합니다. 모션을 사용하면 사용자가 앱에서 일어나는 일을 이해하는 데 큰 도움이 될 수 있습니다.
 
-We can achieve this effect using the `crossfade` function, which creates a pair of transitions called `send` and `receive`. When an element is 'sent', it looks for a corresponding element being 'received', and generates a transition that transforms the element to its counterpart's position and fades it out. When an element is 'received', the reverse happens. If there is no counterpart, the `fallback` transition is used.
+`send` 및 `receive`라는 전환 쌍을 생성하는 `crossfade` 기능을 사용하여 이 효과를 얻을 수 있습니다. 요소가 '전송'되면 '수신'되는 해당 요소를 찾고 해당 요소를 상대 위치로 변환하고 페이드 아웃하는 전환을 생성합니다. 요소가 '수신'되면 그 반대가 발생합니다. 대응 항목이 없으면 `fallback` 전환이 사용됩니다.
 
-Find the `<label>` element on line 65, and add the `send` and `receive` transitions:
+65행에서 `<label>` 요소를 찾고 `send` 및 `receive` 전환을 추가합니다.
 
 ```svelte
 <label
@@ -17,7 +21,7 @@ Find the `<label>` element on line 65, and add the `send` and `receive` transiti
 >
 ```
 
-Do the same for the next `<label>` element:
+다음 `<label>` 요소에 대해 동일한 작업을 수행합니다.
 
 ```svelte
 <label
@@ -27,4 +31,8 @@ Do the same for the next `<label>` element:
 >
 ```
 
+<<<<<<< Updated upstream
 Now, when you toggle items, they move smoothly to their new location. The non-transitioning items still jump around awkwardly — we can fix that in the next chapter.
+=======
+이제 항목을 전환하면 새 위치로 부드럽게 이동합니다. 전환되지 않는 항목은 여전히 어색하게 이동합니다. 다음 장에서 수정할 수 있습니다.
+>>>>>>> Stashed changes

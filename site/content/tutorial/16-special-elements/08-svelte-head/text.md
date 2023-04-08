@@ -2,7 +2,7 @@
 title: <svelte:head>
 ---
 
-The `<svelte:head>` element allows you to insert elements inside the `<head>` of your document:
+`<svelte:head>` 요소를 사용하면 문서의 `<head>` 내부에 요소를 삽입할 수 있습니다.
 
 ```svelte
 <svelte:head>
@@ -10,4 +10,8 @@ The `<svelte:head>` element allows you to insert elements inside the `<head>` of
 </svelte:head>
 ```
 
+<<<<<<< Updated upstream
 > In server-side rendering (SSR) mode, contents of `<svelte:head>` are returned separately from the rest of your HTML.
+=======
+> SSR(서버측 렌더링) 모드에서 `<svelte:head>`의 내용은 나머지 HTML과 별도로 반환됩니다.
+>>>>>>> Stashed changes

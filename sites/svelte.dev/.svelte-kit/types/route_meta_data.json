@@ -1,0 +1,111 @@
+{
+	"/(authed)": [
+		"src/routes/(authed)/+layout.server.js"
+	],
+	"/": [
+		"src/routes/+page.server.js"
+	],
+	"/(authed)/apps": [
+		"src/routes/(authed)/apps/+page.server.js",
+		"src/routes/(authed)/+layout.server.js"
+	],
+	"/(authed)/apps/destroy": [
+		"src/routes/(authed)/apps/destroy/+server.js"
+	],
+	"/auth/callback": [
+		"src/routes/auth/callback/+server.js"
+	],
+	"/auth/login": [
+		"src/routes/auth/login/+server.js"
+	],
+	"/auth/logout": [
+		"src/routes/auth/logout/+server.js"
+	],
+	"/blog": [
+		"src/routes/blog/+page.server.js"
+	],
+	"/blog/rss.xml": [
+		"src/routes/blog/rss.xml/+server.js"
+	],
+	"/blog/the-easiest-way-to-get-started": [
+		"src/routes/blog/the-easiest-way-to-get-started/+page.js"
+	],
+	"/blog/[slug]": [
+		"src/routes/blog/[slug]/+page.server.js"
+	],
+	"/blog/[slug]/card.png": [
+		"src/routes/blog/[slug]/card.png/+server.js"
+	],
+	"/chat": [
+		"src/routes/chat/+server.js"
+	],
+	"/content.json": [
+		"src/routes/content.json/+server.js"
+	],
+	"/docs": [
+		"src/routes/docs/+layout.server.js",
+		"src/routes/docs/+layout.server.js"
+	],
+	"/docs/[slug]": [
+		"src/routes/docs/[slug]/+page.server.js",
+		"src/routes/docs/+layout.server.js"
+	],
+	"/examples": [
+		"src/routes/examples/+page.js"
+	],
+	"/examples/api": [
+		"src/routes/examples/api/+server.js"
+	],
+	"/examples/api/[slug].json": [
+		"src/routes/examples/api/[slug].json/+server.js"
+	],
+	"/examples/[slug]": [
+		"src/routes/examples/[slug]/+page.server.js"
+	],
+	"/faq": [
+		"src/routes/faq/+page.server.js"
+	],
+	"/(authed)/repl": [
+		"src/routes/(authed)/repl/+page.js",
+		"src/routes/(authed)/+layout.server.js"
+	],
+	"/(authed)/repl/create.json": [
+		"src/routes/(authed)/repl/create.json/+server.js"
+	],
+	"/(authed)/repl/embed": [
+		"src/routes/(authed)/repl/embed/+page.js",
+		"src/routes/(authed)/+layout.server.js"
+	],
+	"/(authed)/repl/local/[...path]": [
+		"src/routes/(authed)/repl/local/[...path]/+server.js"
+	],
+	"/(authed)/repl/save/[id].json": [
+		"src/routes/(authed)/repl/save/[id].json/+server.js"
+	],
+	"/(authed)/repl/[id].json": [
+		"src/routes/(authed)/repl/[id].json/+server.js"
+	],
+	"/(authed)/repl/[id]": [
+		"src/routes/(authed)/repl/[id]/+page.server.js",
+		"src/routes/(authed)/+layout.server.js"
+	],
+	"/roadmap": [
+		"src/routes/roadmap/+page.js"
+	],
+	"/search": [
+		"src/routes/search/+page.js",
+		"src/routes/search/+page.server.js"
+	],
+	"/tutorial": [
+		"src/routes/tutorial/+page.server.js"
+	],
+	"/tutorial/api/album": [
+		"src/routes/tutorial/api/album/+server.js"
+	],
+	"/tutorial/random-number": [
+		"src/routes/tutorial/random-number/+server.js"
+	],
+	"/tutorial/[slug]": [
+		"src/routes/tutorial/[slug]/+page.server.js"
+	]
+}

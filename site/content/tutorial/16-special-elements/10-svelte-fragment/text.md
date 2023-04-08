@@ -2,9 +2,9 @@
 title: <svelte:fragment>
 ---
 
-The `<svelte:fragment>` element allows you to place content in a named slot without wrapping it in a container DOM element. This keeps the flow layout of your document intact.
+`<svelte:fragment>` 요소를 사용하면 콘텐츠를 컨테이너 DOM 요소로 래핑하지 않고 명명된 슬롯에 배치할 수 있습니다. 이렇게 하면 문서의 흐름 레이아웃이 그대로 유지됩니다.
 
-In the example notice how we applied a flex layout with a gap of `1em` to the box.
+예제에서 `1em` 간격으로 상자에 플렉스 레이아웃을 적용한 방법을 확인하십시오.
 
 ```svelte
 <!-- Box.svelte -->
@@ -23,9 +23,9 @@ In the example notice how we applied a flex layout with a gap of `1em` to the bo
 </style>
 ```
 
-However, the content in the footer is not spaced out according to this rhythm because wrapping it in a div created a new flow layout.
+그러나 바닥글의 콘텐츠는 div로 래핑하면 새로운 흐름 레이아웃이 생성되기 때문에 이 리듬에 따라 간격이 지정되지 않습니다.
 
-We can solve this by changing `<div slot="footer">` in the `App` component. Replace the `<div>` with `<svelte:fragment>`:
+`App` 구성 요소에서 `<div slot="footer">`를 변경하여 이 문제를 해결할 수 있습니다. `<div>`를 `<svelte:fragment>`로 바꿉니다.
 
 ```svelte
 <svelte:fragment slot="footer">

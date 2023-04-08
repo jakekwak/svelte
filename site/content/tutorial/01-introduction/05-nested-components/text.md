@@ -2,13 +2,13 @@
 title: Nested components
 ---
 
-It would be impractical to put your entire app in a single component. Instead, we can import components from other files and then use them as though we were including elements.
+전체 앱을 단일 구성 요소에 넣는 것은 비실용적입니다. 대신 다른 파일에서 구성 요소를 가져온 다음 요소를 포함하는 것처럼 사용할 수 있습니다.
 
-We now present you 2 files in the editor on the right (upper bar) to click on, `App.svelte` and `Nested.svelte`.
+이제 오른쪽(상단 막대)에 있는 편집기에 `App.svelte` 및 `Nested.svelte`를 클릭할 수 있는 2개의 파일이 표시됩니다.
 
-Each `.svelte` file holds a component that is a reusable self-contained block of code that encapsulates HTML, CSS, and JavaScript that belong together.
+각 `.svelte` 파일에는 함께 속한 HTML, CSS 및 JavaScript를 캡슐화하는 재사용 가능한 자체 포함 코드 블록인 구성 요소가 있습니다.
 
-Let's add a `<script>` tag to `App.svelte` that imports the file (our component) `Nested.svelte` into our app...
+파일(구성 요소) `Nested.svelte`를 앱으로 가져오는 `App.svelte`에 `<script>` 태그를 추가해 보겠습니다.
 
 ```svelte
 <script>
@@ -16,13 +16,13 @@ Let's add a `<script>` tag to `App.svelte` that imports the file (our component)
 </script>
 ```
 
-...then use component `Nested` in the app markup:
+그런 다음 앱 마크업에서 컴포넌트 `Nested`를 사용하십시오.
 
 ```svelte
 <p>This is a paragraph.</p>
 <Nested />
 ```
 
-Notice that even though `Nested.svelte` has a `<p>` element, the styles from `App.svelte` don't leak in.
+`Nested.svelte`에 `<p>` 요소가 있더라도 `App.svelte`의 스타일이 누출되지 않는다는 점에 유의하세요.
 
-Also notice that the component name `Nested` is capitalised. This convention has been adopted to allow us to differentiate between user-defined components and regular HTML tags.
+또한 구성 요소 이름 `Nested`가 대문자로 표시되어 있습니다. 이 규칙은 사용자 정의 구성 요소와 일반 HTML 태그를 구별할 수 있도록 채택되었습니다.

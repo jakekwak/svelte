@@ -2,7 +2,7 @@
 title: Else-if blocks
 ---
 
-Multiple conditions can be 'chained' together with `else if`:
+`else if`와 함께 여러 조건을 '연결'할 수 있습니다.
 
 ```svelte
 {#if x > 10}

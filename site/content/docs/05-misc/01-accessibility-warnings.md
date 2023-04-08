@@ -2,18 +2,19 @@
 title: 'Accessibility warnings'
 ---
 
-Accessibility (shortened to a11y) isn't always easy to get right, but Svelte will help by warning you at compile time if you write inaccessible markup. However, keep in mind that many accessibility issues can only be identified at runtime using other automated tools and by manually testing your application.
+접근성(a11y로 줄임)이 항상 올바른 것은 아니지만 Svelte는 액세스할 수 없는 마크업을 작성하는 경우 컴파일 타임에 경고하여 도움을 줍니다. 그러나 많은 접근성 문제는 다른 자동화 도구를 사용하고 응용 프로그램을 수동으로 테스트해야만 런타임에 식별할 수 있음을 명심하십시오.
 
-Here is a list of accessibility checks Svelte will do for you.
+다음은 Svelte가 수행할 접근성 검사 목록입니다.
 
 ## `a11y-accesskey`
 
-Enforce no `accesskey` on element. Access keys are HTML attributes that allow web developers to assign keyboard shortcuts to elements. Inconsistencies between keyboard shortcuts and keyboard commands used by screen reader and keyboard-only users create accessibility complications. To avoid complications, access keys should not be used.
+요소에 'accesskey'를 적용하지 않습니다. 액세스 키는 웹 개발자가 요소에 키보드 단축키를 할당할 수 있도록 하는 HTML 속성입니다. 스크린 리더와 키보드만 사용하는 사용자가 사용하는 키보드 단축키와 키보드 명령 간의 불일치로 인해 접근성 문제가 발생합니다. 합병증을 피하려면 액세스 키를 사용하지 않아야 합니다.
 
 ```svelte
 <!-- A11y: Avoid using accesskey --><div accessKey="z" />
 ```
 
+<<<<<<< Updated upstream:site/content/docs/05-misc/01-accessibility-warnings.md
 ## `a11y-aria-activedescendant-has-tabindex`
 
 An element with `aria-activedescendant` must be tabbable, so it must either have an inherent `tabindex` or declare `tabindex` as an attribute.
@@ -24,8 +25,13 @@ An element with `aria-activedescendant` must be tabbable, so it must either have
 ```
 
 ## `a11y-aria-attributes`
+=======
+---
 
-Certain reserved DOM elements do not support ARIA roles, states and properties. This is often because they are not visible, for example `meta`, `html`, `script`, `style`. This rule enforces that these DOM elements do not contain the `aria-*` props.
+### `a11y-aria-attributes`
+>>>>>>> Stashed changes:site/content/docs/06-accessibility-warnings.md
+
+예약된 특정 DOM 요소는 ARIA 역할, 상태 및 속성을 지원하지 않습니다. 이는 종종 `meta`, `html`, `script`, `style`과 같이 보이지 않기 때문입니다. 이 규칙은 이러한 DOM 요소가 `aria-*` 소품을 포함하지 않도록 강제합니다.
 
 ```svelte
 <!-- A11y: <meta> should not have aria-* attributes -->
@@ -34,7 +40,7 @@ Certain reserved DOM elements do not support ARIA roles, states and properties. 
 
 ## `a11y-autofocus`
 
-Enforce that `autofocus` is not used on elements. Autofocusing elements can cause usability issues for sighted and non-sighted users alike.
+요소에 `autofocus`이 사용되지 않도록 합니다. 자동 초점 요소는 시력이 있는 사용자와 시력이 없는 사용자 모두에게 사용성 문제를 일으킬 수 있습니다.
 
 ```svelte
 <!-- A11y: Avoid using autofocus -->
@@ -43,10 +49,11 @@ Enforce that `autofocus` is not used on elements. Autofocusing elements can caus
 
 ## `a11y-click-events-have-key-events`
 
-Enforce `on:click` is accompanied by at least one of the following: `on:keyup`, `on:keydown`, `on:keypress`. Coding for the keyboard is important for users with physical disabilities who cannot use a mouse, AT compatibility, and screenreader users.
+`on:click` 시행에는 `onKeyUp`, `onKeyDown`, `onKeyPress` 중 하나 이상이 수반됩니다. 마우스를 사용할 수 없는 신체 장애가 있는 사용자, AT 호환성 및 스크린리더 사용자에게 키보드 코딩은 중요합니다.
 
-This does not apply for interactive or hidden elements.
+이는 대화형 또는 숨겨진 요소에는 적용되지 않습니다.
 
+<<<<<<< Updated upstream:site/content/docs/05-misc/01-accessibility-warnings.md
 ```svelte
 <!-- A11y: visible, non-interactive elements with an on:click event must be accompanied by an on:keydown, on:keyup, or on:keypress event. -->
 <div on:click={() => {}} />
@@ -55,10 +62,20 @@ This does not apply for interactive or hidden elements.
 Note that the `keypress` event is now deprecated, so it is officially recommended to use either the `keyup` or `keydown` event instead, accordingly.
 
 ## `a11y-distracting-elements`
+=======
+```sv
+<!-- A11y: on:click 이벤트가 있는 가시적이고 비대화형 요소에는 on:keydown, on:keyup 또는 on:keypress 이벤트가 수반되어야 합니다. -->
+<div on:click={() => {}} />
+```
 
-Enforces that no distracting elements are used. Elements that can be visually distracting can cause accessibility issues with visually impaired users. Such elements are most likely deprecated, and should be avoided.
+---
 
-The following elements are visually distracting: `<marquee>` and `<blink>`.
+### `a11y-distracting-elements`
+>>>>>>> Stashed changes:site/content/docs/06-accessibility-warnings.md
+
+주의를 산만하게 하는 요소가 사용되지 않도록 합니다. 시각적으로 주의를 산만하게 할 수 있는 요소는 시각 장애가 있는 사용자에게 접근성 문제를 일으킬 수 있습니다. 이러한 요소는 사용되지 않을 가능성이 높으므로 피해야 합니다.
+
+다음 요소는 시각적으로 주의를 산만하게 합니다: `<marquee>` 및 `<blink>`.
 
 ```svelte
 <!-- A11y: Avoid <marquee> elements -->
@@ -67,7 +84,7 @@ The following elements are visually distracting: `<marquee>` and `<blink>`.
 
 ## `a11y-hidden`
 
-Certain DOM elements are useful for screen reader navigation and should not be hidden.
+특정 DOM 요소는 스크린 리더 탐색에 유용하며 숨겨서는 안 됩니다.
 
 ```svelte
 <!-- A11y: <h2> element should not be hidden --><h2 aria-hidden="true">invisible header</h2>
@@ -75,7 +92,7 @@ Certain DOM elements are useful for screen reader navigation and should not be h
 
 ## `a11y-img-redundant-alt`
 
-Enforce img alt attribute does not contain the word image, picture, or photo. Screen readers already announce `img` elements as an image. There is no need to use words such as _image_, _photo_, and/or _picture_.
+img alt 속성에 image, picture 또는 photo라는 단어가 포함되어 있지 않습니다. 스크린 리더는 이미 `img` 요소를 이미지로 알려줍니다. _image_, _photo_ 및/또는 _picture_와 같은 단어를 사용할 필요가 없습니다.
 
 ```svelte
 <img src="foo" alt="Foo eating a sandwich." />
@@ -95,8 +112,7 @@ Enforce img alt attribute does not contain the word image, picture, or photo. Sc
 
 ## `a11y-incorrect-aria-attribute-type`
 
-Enforce that only the correct type of value is used for aria attributes. For example, `aria-hidden`
-should only receive a boolean.
+올바른 유형의 값만 aria 속성에 사용되도록 합니다. 예를 들어 `aria-hidden`은 부울만 받아야 합니다.
 
 ```svelte
 <!-- A11y: The value of 'aria-hidden' must be exactly one of true or false -->
@@ -105,13 +121,14 @@ should only receive a boolean.
 
 ## `a11y-invalid-attribute`
 
-Enforce that attributes important for accessibility have a valid value. For example, `href` should not be empty, `'#'`, or `javascript:`.
+접근성에 중요한 속성이 유효한 값을 갖도록 강제합니다. 예를 들어 `href`는 비어 있거나 `'#'` 또는 `javascript:`가 아니어야 합니다.
 
 ```svelte
 <!-- A11y: '' is not a valid href attribute -->
 <a href="">invalid</a>
 ```
 
+<<<<<<< Updated upstream:site/content/docs/05-misc/01-accessibility-warnings.md
 ## `a11y-interactive-supports-focus`
 
 Enforce that elements with an interactive role and interactive handlers (mouse or key press) must be focusable or tabbable.
@@ -122,13 +139,18 @@ Enforce that elements with an interactive role and interactive handlers (mouse o
 ```
 
 ## `a11y-label-has-associated-control`
+=======
+---
 
-Enforce that a label tag has a text label and an associated control.
+### `a11y-label-has-associated-control`
+>>>>>>> Stashed changes:site/content/docs/06-accessibility-warnings.md
 
-There are two supported ways to associate a label with a control:
+레이블 태그에 텍스트 레이블과 연결된 컨트롤이 있는지 확인합니다.
 
-- Wrapping a control in a label tag.
-- Adding `for` to a label and assigning it the ID of an input on the page.
+레이블을 컨트롤과 연결하는 데 지원되는 두 가지 방법이 있습니다.
+
+- 컨트롤을 레이블 태그로 래핑합니다.
+- 레이블에 `for`를 추가하고 페이지의 입력 ID를 할당합니다.
 
 ```svelte
 <label for="id">B</label>
@@ -141,9 +163,9 @@ There are two supported ways to associate a label with a control:
 
 ## `a11y-media-has-caption`
 
-Providing captions for media is essential for deaf users to follow along. Captions should be a transcription or translation of the dialogue, sound effects, relevant musical cues, and other relevant audio information. Not only is this important for accessibility, but can also be useful for all users in the case that the media is unavailable (similar to `alt` text on an image when an image is unable to load).
+미디어에 캡션을 제공하는 것은 청각 장애인 사용자가 따라가는 데 필수적입니다. 캡션은 대화, 음향 효과, 관련 음악 신호 및 기타 관련 오디오 정보의 전사 또는 번역이어야 합니다. 이것은 접근성에 중요할 뿐만 아니라 미디어를 사용할 수 없는 경우 모든 사용자에게 유용할 수 있습니다(이미지를 로드할 수 없을 때 이미지의 `alt` 텍스트와 유사).
 
-The captions should contain all important and relevant information to understand the corresponding media. This may mean that the captions are not a 1:1 mapping of the dialogue in the media content. However, captions are not necessary for video components with the `muted` attribute.
+캡션에는 해당 미디어를 이해하는 데 중요하고 관련된 모든 정보가 포함되어야 합니다. 이는 캡션이 미디어 콘텐츠 대화의 1:1 매핑이 아님을 의미할 수 있습니다. 그러나 `muted` 속성이 있는 동영상 구성요소에는 캡션이 필요하지 않습니다.
 
 ```svelte
 <video><track kind="captions" /></video>
@@ -159,7 +181,7 @@ The captions should contain all important and relevant information to understand
 
 ## `a11y-misplaced-role`
 
-Certain reserved DOM elements do not support ARIA roles, states and properties. This is often because they are not visible, for example `meta`, `html`, `script`, `style`. This rule enforces that these DOM elements do not contain the `role` props.
+예약된 특정 DOM 요소는 ARIA 역할, 상태 및 속성을 지원하지 않습니다. 이는 종종 `meta`, `html`, `script`, `style`과 같이 보이지 않기 때문입니다. 이 규칙은 이러한 DOM 요소가 `role` 소품을 포함하지 않도록 강제합니다.
 
 ```svelte
 <!-- A11y: <meta> should not have role attribute -->
@@ -168,7 +190,7 @@ Certain reserved DOM elements do not support ARIA roles, states and properties. 
 
 ## `a11y-misplaced-scope`
 
-The scope attribute should only be used on `<th>` elements.
+범위 속성은 `<th>` 요소에만 사용해야 합니다.
 
 ```svelte
 <!-- A11y: The scope attribute should only be used with <th> elements --><div scope="row" />
@@ -176,15 +198,15 @@ The scope attribute should only be used on `<th>` elements.
 
 ## `a11y-missing-attribute`
 
-Enforce that attributes required for accessibility are present on an element. This includes the following checks:
+접근성에 필요한 속성이 요소에 존재하도록 강제합니다. 여기에는 다음 검사가 포함됩니다.
 
-- `<a>` should have an href (unless it's a [fragment-defining tag](https://github.com/sveltejs/svelte/issues/4697))
-- `<area>` should have alt, aria-label, or aria-labelledby
-- `<html>` should have lang
-- `<iframe>` should have title
-- `<img>` should have alt
-- `<object>` should have title, aria-label, or aria-labelledby
-- `<input type="image">` should have alt, aria-label, or aria-labelledby
+- `<a>`에는 href가 있어야 합니다([단편 정의 태그](https://github.com/sveltejs/svelte/issues/4697)가 아닌 경우).
+- `<area>`에는 alt, aria-label 또는 aria-labelledby가 있어야 합니다.
+- `<html>`에는 lang이 있어야 합니다.
+- `<iframe>`에는 제목이 있어야 합니다.
+- `<img>`에는 alt가 있어야 합니다.
+- `<object>`에는 제목, aria-label 또는 aria-labelledby가 있어야 합니다.
+- `<input type="image">`에는 alt, aria-label 또는 aria-labelledby가 있어야 합니다.
 
 ```svelte
 <!-- A11y: <input type=\"image\"> element should have an alt, aria-label or aria-labelledby attribute -->
@@ -199,7 +221,7 @@ Enforce that attributes required for accessibility are present on an element. Th
 
 ## `a11y-missing-content`
 
-Enforce that heading elements (`h1`, `h2`, etc.) and anchors have content and that the content is accessible to screen readers
+제목 요소(`h1`, `h2` 등)와 앵커에 콘텐츠가 있고 스크린 리더에서 콘텐츠에 액세스할 수 있도록 강제합니다.
 
 ```svelte
 <!-- A11y: <a> element should have child content -->
@@ -211,7 +233,7 @@ Enforce that heading elements (`h1`, `h2`, etc.) and anchors have content and th
 
 ## `a11y-mouse-events-have-key-events`
 
-Enforce that `on:mouseover` and `on:mouseout` are accompanied by `on:focus` and `on:blur`, respectively. This helps to ensure that any functionality triggered by these mouse events is also accessible to keyboard users.
+`on:mouseover` 및 `on:mouseout`에는 각각 `on:focus` 및 `on:blur`가 수반되도록 합니다. 이렇게 하면 이러한 마우스 이벤트에 의해 트리거되는 모든 기능에 키보드 사용자도 액세스할 수 있습니다.
 
 ```svelte
 <!-- A11y: on:mouseover must be accompanied by on:focus -->
@@ -223,7 +245,7 @@ Enforce that `on:mouseover` and `on:mouseout` are accompanied by `on:focus` and 
 
 ## `a11y-no-redundant-roles`
 
-Some HTML elements have default ARIA roles. Giving these elements an ARIA role that is already set by the browser [has no effect](https://www.w3.org/TR/using-aria/#aria-does-nothing) and is redundant.
+일부 HTML 요소에는 기본 ARIA 역할이 있습니다. 이러한 요소에 브라우저에서 이미 설정한 [아무런 효과도 없고](https://www.w3.org/TR/using-aria/#aria-does-nothing) 중복되는 ARIA 역할을 부여합니다.
 
 ```svelte
 <!-- A11y: Redundant role 'button' -->
@@ -235,13 +257,14 @@ Some HTML elements have default ARIA roles. Giving these elements an ARIA role t
 
 ## `a11y-no-interactive-element-to-noninteractive-role`
 
-[WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#usage_intro) roles should not be used to convert an interactive element to a non-interactive element. Non-interactive ARIA roles include `article`, `banner`, `complementary`, `img`, `listitem`, `main`, `region` and `tooltip`.
+[WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#usage_intro) 역할은 대화형 요소를 비대화형 요소로 변환하는 데 사용해서는 안 됩니다. 비대화형 ARIA 역할에는 `article`, `banner`, `complementary`, `img`, `listitem`, `main`, `region` 및 `tooltip`이 포함됩니다.
 
 ```svelte
 <!-- A11y: <textarea> cannot have role 'listitem' -->
 <textarea role="listitem" />
 ```
 
+<<<<<<< Updated upstream:site/content/docs/05-misc/01-accessibility-warnings.md
 ## `a11y-no-noninteractive-element-to-interactive-role`
 
 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/#usage_intro) roles should not be used to convert a non-interactive element to an interactive element. Interactive ARIA roles include `button`, `link`, `checkbox`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `searchbox`, `switch` and `textbox`.
@@ -252,16 +275,27 @@ Some HTML elements have default ARIA roles. Giving these elements an ARIA role t
 ```
 
 ## `a11y-no-noninteractive-tabindex`
+=======
+---
 
-Tab key navigation should be limited to elements on the page that can be interacted with.
+### `a11y-no-noninteractive-tabindex`
+>>>>>>> Stashed changes:site/content/docs/06-accessibility-warnings.md
 
+Tab 키 탐색은 상호 작용할 수 있는 페이지의 요소로 제한되어야 합니다.
+
+<<<<<<< Updated upstream:site/content/docs/05-misc/01-accessibility-warnings.md
 ```svelte
 <!-- A11y: noninteractive element cannot have nonnegative tabIndex value --><div tabindex="0" />
+=======
+```sv
+<!-- A11y: noninteractive element cannot have positive tabIndex value -->
+<div tabindex='0' />
+>>>>>>> Stashed changes:site/content/docs/06-accessibility-warnings.md
 ```
 
 ## `a11y-positive-tabindex`
 
-Avoid positive `tabindex` property values. This will move elements out of the expected tab order, creating a confusing experience for keyboard users.
+긍정적인 `tabindex` 속성 값을 사용하지 마세요. 이렇게 하면 예상되는 탭 순서에서 요소가 이동되어 키보드 사용자에게 혼란스러운 경험이 됩니다.
 
 ```svelte
 <!-- A11y: avoid tabindex values above zero --><div tabindex="1" />
@@ -269,13 +303,14 @@ Avoid positive `tabindex` property values. This will move elements out of the ex
 
 ## `a11y-role-has-required-aria-props`
 
-Elements with ARIA roles must have all required attributes for that role.
+ARIA 역할이 있는 요소에는 해당 역할에 필요한 모든 속성이 있어야 합니다.
 
 ```svelte
 <!-- A11y: A11y: Elements with the ARIA role "checkbox" must have the following attributes defined: "aria-checked" -->
 <span role="checkbox" aria-labelledby="foo" tabindex="0" />
 ```
 
+<<<<<<< Updated upstream:site/content/docs/05-misc/01-accessibility-warnings.md
 ## `a11y-role-supports-aria-props`
 
 Elements with explicit or implicit roles defined contain only `aria-*` properties supported by that role.
@@ -289,8 +324,13 @@ Elements with explicit or implicit roles defined contain only `aria-*` propertie
 ```
 
 ## `a11y-structure`
+=======
+---
 
-Enforce that certain DOM elements have the correct structure.
+### `a11y-structure`
+>>>>>>> Stashed changes:site/content/docs/06-accessibility-warnings.md
+
+특정 DOM 요소가 올바른 구조를 갖도록 합니다.
 
 ```svelte
 <!-- A11y: <figcaption> must be an immediate child of <figure> -->
@@ -301,7 +341,7 @@ Enforce that certain DOM elements have the correct structure.
 
 ## `a11y-unknown-aria-attribute`
 
-Enforce that only known ARIA attributes are used. This is based on the [WAI-ARIA States and Properties spec](https://www.w3.org/WAI/PF/aria-1.1/states_and_properties).
+알려진 ARIA 속성만 사용되도록 합니다. 이는 [WAI-ARIA 상태 및 속성 사양](https://www.w3.org/WAI/PF/aria-1.1/states_and_properties)을 기반으로 합니다.
 
 ```svelte
 <!-- A11y: Unknown aria attribute 'aria-labeledby' (did you mean 'labelledby'?) -->
@@ -310,7 +350,7 @@ Enforce that only known ARIA attributes are used. This is based on the [WAI-ARIA
 
 ## `a11y-unknown-role`
 
-Elements with ARIA roles must use a valid, non-abstract ARIA role. A reference to role definitions can be found at [WAI-ARIA](https://www.w3.org/TR/wai-aria/#role_definitions) site.
+ARIA 역할이 있는 요소는 유효한 비추상 ARIA 역할을 사용해야 합니다. 역할 정의에 대한 참조는 [WAI-ARIA](https://www.w3.org/TR/wai-aria/#role_definitions) 사이트에서 찾을 수 있습니다.
 
 ```svelte
 <!-- A11y: Unknown role 'toooltip' (did you mean 'tooltip'?) --><div role="toooltip" />

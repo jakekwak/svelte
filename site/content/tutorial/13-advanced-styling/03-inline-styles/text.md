@@ -2,9 +2,9 @@
 title: Inline styles
 ---
 
-Apart from adding styles inside style tags, you can also add styles to individual elements using the style attribute. Usually you will want to do styling through CSS, but this can come in handy for dynamic styles, especially when combined with CSS custom properties.
+스타일 태그 안에 스타일을 추가하는 것 외에도 style 속성을 사용하여 개별 요소에 스타일을 추가할 수도 있습니다. 일반적으로 CSS를 통해 스타일 지정을 원하지만 이는 특히 CSS 사용자 정의 속성과 결합될 때 동적 스타일에 유용할 수 있습니다.
 
-Add the following style attribute to the paragraph element:
+단락 요소에 다음 스타일 속성을 추가합니다.
 `style="color: {color}; --opacity: {bgOpacity};"`
 
-Great, now you can style the paragraph using variables that change based on your input without having to make a class for every possible value.
+좋습니다. 이제 가능한 모든 값에 대해 클래스를 만들지 않고도 입력에 따라 변경되는 변수를 사용하여 단락의 스타일을 지정할 수 있습니다.

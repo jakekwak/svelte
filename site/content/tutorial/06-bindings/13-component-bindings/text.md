@@ -2,12 +2,16 @@
 title: Component bindings
 ---
 
-Just as you can bind to properties of DOM elements, you can bind to component props. For example, we can bind to the `value` prop of this `<Keypad>` component as though it were a form element:
+DOM 요소의 속성에 바인딩할 수 있는 것처럼 구성 요소 소품에 바인딩할 수 있습니다. 예를 들어, 폼 요소인 것처럼 이 `<Keypad>` 구성 요소의 `value` 소품에 바인딩할 수 있습니다.
 
 ```svelte
 <Keypad bind:value={pin} on:submit={handleSubmit} />
 ```
 
-Now, when the user interacts with the keypad, the value of `pin` in the parent component is immediately updated.
+이제 사용자가 키패드와 상호 작용하면 상위 구성 요소의 `pin` 값이 즉시 업데이트됩니다.
 
+<<<<<<< Updated upstream
 > Use component bindings sparingly. It can be difficult to track the flow of data around your application if you have too many of them, especially if there is no 'single source of truth'.
+=======
+> 구성 요소 바인딩을 드물게 사용하십시오. 데이터가 너무 많으면, 특히 '단일 소스'가 없는 경우 애플리케이션 주변의 데이터 흐름을 추적하기 어려울 수 있습니다.
+>>>>>>> Stashed changes

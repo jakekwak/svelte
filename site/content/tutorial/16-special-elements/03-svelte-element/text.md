@@ -2,7 +2,7 @@
 title: <svelte:element>
 ---
 
-Sometimes we don't know in advance what kind of DOM element to render. `<svelte:element>` comes in handy here. Instead of a sequence of `if` blocks...
+렌더링할 DOM 요소의 종류를 미리 알지 못하는 경우가 있습니다. `<svelte:element>`는 여기서 유용합니다. 일련의 `if` 블록 대신...
 
 ```svelte
 {#if selected === 'h1'}
@@ -14,10 +14,14 @@ Sometimes we don't know in advance what kind of DOM element to render. `<svelte:
 {/if}
 ```
 
-...we can have a single dynamic component:
+...하나의 동적 구성 요소를 가질 수 있습니다.
 
 ```svelte
 <svelte:element this={selected}>I'm a {selected} tag</svelte:element>
 ```
 
+<<<<<<< Updated upstream
 The `this` value can be any string, or a falsy value — if it's falsy, no element is rendered.
+=======
+`this` 값은 임의의 문자열이거나 거짓 값일 수 있습니다 — 거짓이면 요소가 렌더링되지 않습니다.
+>>>>>>> Stashed changes

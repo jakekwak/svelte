@@ -2,4 +2,4 @@
 question: Are there any third-party resources?
 ---
 
-Svelte Society maintains a [list of books and videos](https://sveltesociety.dev/resources).
+Svelte Society는 [도서 및 비디오 목록](https://sveltesociety.dev/resources)을 관리합니다.

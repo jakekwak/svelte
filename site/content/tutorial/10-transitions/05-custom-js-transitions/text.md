@@ -2,7 +2,7 @@
 title: Custom JS transitions
 ---
 
-While you should generally use CSS for transitions as much as possible, there are some effects that can't be achieved without JavaScript, such as a typewriter effect:
+일반적으로 가능한 한 전환에 CSS를 사용해야 하지만 타자기 효과와 같이 JavaScript 없이는 달성할 수 없는 몇 가지 효과가 있습니다.
 
 ```js
 function typewriter(node, { speed = 1 }) {
@@ -17,8 +17,13 @@ function typewriter(node, { speed = 1 }) {
 
 	return {
 		duration,
+<<<<<<< Updated upstream
 		tick: (t) => {
 			const i = Math.trunc(text.length * t);
+=======
+		tick: t => {
+			const i = Math.trunc(text.length * t); // ~~(text.length * t)
+>>>>>>> Stashed changes
 			node.textContent = text.slice(0, i);
 		}
 	};

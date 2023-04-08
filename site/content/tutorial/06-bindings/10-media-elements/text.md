@@ -2,9 +2,9 @@
 title: Media elements
 ---
 
-The `<audio>` and `<video>` elements have several properties that you can bind to. This example demonstrates a few of them.
+`<audio>` 및 `<video>` 요소에는 바인딩할 수 있는 여러 속성이 있습니다. 이 예제는 그 중 몇 가지를 보여줍니다.
 
-On line 62, add `currentTime={time}`, `duration` and `paused` bindings:
+62행에서 `currentTime={time}`, `duration` 및 `paused` 바인딩을 추가합니다.
 
 ```svelte
 <video
@@ -22,12 +22,13 @@ On line 62, add `currentTime={time}`, `duration` and `paused` bindings:
 </video>
 ```
 
-> `bind:duration` is equivalent to `bind:duration={duration}`
+> `bind:duration`은 `bind:duration={duration}`과 동일합니다.
 
-Now, when you click on the video, it will update `time`, `duration` and `paused` as appropriate. This means we can use them to build custom controls.
+이제 비디오를 클릭하면 `time`, `duration` 및 `paused`가 적절하게 업데이트됩니다. 즉, 사용자 지정 컨트롤을 빌드하는 데 사용할 수 있습니다.
 
-> Ordinarily on the web, you would track `currentTime` by listening for `timeupdate` events. But these events fire too infrequently, resulting in choppy UI. Svelte does better — it checks `currentTime` using `requestAnimationFrame`.
+> 일반적으로 웹에서는 `timeupdate` 이벤트를 수신하여 `currentTime`을 추적합니다. 그러나 이러한 이벤트는 너무 드물게 실행되어 고르지 못한 UI가 발생합니다. Svelte가 더 좋습니다. `requestAnimationFrame`을 사용하여 `currentTime`을 확인합니다.
 
+<<<<<<< Updated upstream
 The complete set of bindings for `<audio>` and `<video>` is as follows — six _readonly_ bindings...
 
 - `duration` (readonly) — the total duration of the video, in seconds
@@ -44,5 +45,23 @@ The complete set of bindings for `<audio>` and `<video>` is as follows — six _
 - `paused` — this one should be self-explanatory
 - `volume` — a value between 0 and 1
 - `muted` — a boolean value where true is muted
+=======
+`<audio>` 및 `<video>`에 대한 전체 바인딩 세트는 다음과 같습니다 — 6개의 *읽기 전용* 바인딩...
 
-Videos additionally have readonly `videoWidth` and `videoHeight` bindings.
+* `duration` (readonly) — 비디오의 총 재생 시간(초)
+* `buffered` (readonly) — `{start, end}` 객체의 배열
+* `seekable` (readonly) — ditto
+* `played` (readonly) — ditto
+* `seeking` (readonly) — boolean
+* `ended` (readonly) — boolean
+
+...그리고 5개의 *양방향* 바인딩:
+
+* `currentTime` — 비디오의 현재 지점(초)
+* `playbackRate` — 동영상 재생 속도, `1`은 '보통'
+* `paused` — 설명이 필요하지 않습니다.
+* `volume` — 0과 1 사이의 값
+* `muted` — true가 음소거된 부울 값
+>>>>>>> Stashed changes
+
+비디오에는 읽기 전용 `videoWidth` 및 `videoHeight` 바인딩이 추가로 있습니다.

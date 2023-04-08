@@ -2,9 +2,9 @@
 title: The style directive
 ---
 
-Being able to set CSS properties dynamically is nice. However, this can get unwieldy if you have to write a long string. Mistakes like missing any of the semicolons could make the whole string invalid. Therefore, Svelte provides a nicer way to write inline styles with the style directive.
+CSS 속성을 동적으로 설정할 수 있다는 것은 좋은 일입니다. 그러나 긴 문자열을 작성해야 하는 경우 다루기 어려울 수 있습니다. 세미콜론 누락과 같은 실수는 전체 문자열을 무효화할 수 있습니다. 따라서 Svelte는 스타일 지시문을 사용하여 인라인 스타일을 작성하는 더 좋은 방법을 제공합니다.
 
-Change the style attribute of the paragraph to the following:
+단락의 스타일 속성을 다음으로 변경합니다.
 
 ```svelte
 <p
@@ -13,6 +13,6 @@ Change the style attribute of the paragraph to the following:
 >
 ```
 
-The style directive shares a few qualities with the class directive. You can use a shorthand when the name of the property and the variable are the same. So `style:color="{color}"` can be written as just `style:color`.
+스타일 지시어는 클래스 지시어와 몇 가지 특성을 공유합니다. 속성 이름과 변수 이름이 같으면 속기를 사용할 수 있습니다. 따라서 `style:color="{color}"`는 그냥 `style:color`로 쓸 수 있습니다.
 
-Similar to the class directive, the style directive will take precedence if you try to set the same property through a style attribute.
+class 지시어와 유사하게 style 속성을 통해 동일한 속성을 설정하려고 하면 style 지시어가 우선합니다.

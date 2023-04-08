@@ -2,11 +2,15 @@
 title: onMount
 ---
 
+<<<<<<< Updated upstream
 Every component has a _lifecycle_ that starts when it is created, and ends when it is destroyed. There are a handful of functions that allow you to run code at key moments during that lifecycle.
+=======
+모든 구성 요소에는 생성될 때 시작하여 파괴될 때 끝나는 *수명 주기*가 있습니다. 수명 주기 동안 중요한 순간에 코드를 실행할 수 있는 몇 가지 기능이 있습니다.
+>>>>>>> Stashed changes
 
-The one you'll use most frequently is `onMount`, which runs after the component is first rendered to the DOM. We briefly encountered it [earlier](/tutorial/bind-this) when we needed to interact with a `<canvas>` element after it had been rendered.
+가장 자주 사용하게 될 것은 `onMount`로 구성 요소가 처음 DOM에 렌더링된 후에 실행됩니다. 렌더링된 후 `<canvas>` 요소와 상호 작용해야 할 때 [이전에](/tutorial/bind-this) 잠시 만났습니다.
 
-We'll add an `onMount` handler that loads some data over the network:
+네트워크를 통해 일부 데이터를 로드하는 `onMount` 핸들러를 추가합니다.
 
 ```svelte
 <script>
@@ -21,8 +25,12 @@ We'll add an `onMount` handler that loads some data over the network:
 </script>
 ```
 
-> It's recommended to put the `fetch` in `onMount` rather than at the top level of the `<script>` because of server-side rendering (SSR). With the exception of `onDestroy`, lifecycle functions don't run during SSR, which means we can avoid fetching data that should be loaded lazily once the component has been mounted in the DOM.
+> `<script>`의 최상위 수준보다는 `onMount`에 `fetch`를 넣는 것이 서버측 렌더링(SSR) 때문에 권장됩니다. `onDestroy`를 제외하고 수명 주기 함수는 SSR 중에 실행되지 않습니다. 즉, 구성 요소가 DOM에 마운트된 후 느리게 로드되어야 하는 데이터를 가져오는 것을 피할 수 있습니다.
 
-Lifecycle functions must be called while the component is initialising so that the callback is bound to the component instance — not (say) in a `setTimeout`.
+콜백이 `setTimeout`이 아닌 구성 요소 인스턴스에 바인딩되도록 구성 요소가 초기화되는 동안 수명 주기 함수를 호출해야 합니다.
 
+<<<<<<< Updated upstream
 If the `onMount` callback returns a function, that function will be called when the component is destroyed.
+=======
+`onMount` 콜백이 함수를 반환하는 경우 구성 요소가 소멸될 때 해당 함수가 호출됩니다.
+>>>>>>> Stashed changes

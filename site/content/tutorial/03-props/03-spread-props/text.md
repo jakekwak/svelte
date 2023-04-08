@@ -2,10 +2,10 @@
 title: Spread props
 ---
 
-If you have an object of properties, you can 'spread' them onto a component instead of specifying each one:
+속성 개체가 있는 경우 각각을 지정하는 대신 구성 요소에 '확산'할 수 있습니다.
 
 ```svelte
 <Info {...pkg} />
 ```
 
-> Conversely, if you need to reference all the props that were passed into a component, including ones that weren't declared with `export`, you can do so by accessing `$$props` directly. It's not generally recommended, as it's difficult for Svelte to optimise, but it's useful in rare cases.
+> 반대로 `export`로 선언되지 않은 것을 포함하여 구성 요소에 전달된 모든 props를 참조해야 하는 경우 `$$props`에 직접 액세스하여 참조할 수 있습니다. Svelte가 최적화하기 어렵기 때문에 일반적으로 권장되지는 않지만 드문 경우에 유용합니다.

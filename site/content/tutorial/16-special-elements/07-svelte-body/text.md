@@ -2,9 +2,9 @@
 title: <svelte:body>
 ---
 
-Similar to `<svelte:window>` and `<svelte:document>`, the `<svelte:body>` element allows you to listen for events that fire on `document.body`. This is useful with the `mouseenter` and `mouseleave` events, which don't fire on `window`.
+`<svelte:window>`와 마찬가지로 `<svelte:body>` 요소를 사용하면 `document.body`에서 실행되는 이벤트를 수신할 수 있습니다. 이는 `window`에서 실행되지 않는 `mouseenter` 및 `mouseleave` 이벤트에 유용합니다.
 
-Add the `mouseenter` and `mouseleave` handlers to the `<svelte:body>` tag:
+`mouseenter` 및 `mouseleave` 처리기를 `<svelte:body>` 태그에 추가합니다.
 
 <!-- prettier-ignore -->
 ```svelte

@@ -2,13 +2,19 @@
 title: Writable stores
 ---
 
-Not all application state belongs inside your application's component hierarchy. Sometimes, you'll have values that need to be accessed by multiple unrelated components, or by a regular JavaScript module.
+모든 애플리케이션 상태가 애플리케이션의 구성 요소 계층 구조에 속하는 것은 아닙니다. 경우에 따라 관련 없는 여러 구성 요소 또는 일반 JavaScript 모듈에서 액세스해야 하는 값이 있을 수 있습니다.
 
+<<<<<<< Updated upstream
 In Svelte, we do this with _stores_. A store is simply an object with a `subscribe` method that allows interested parties to be notified whenever the store value changes. In `App.svelte`, `count` is a store, and we're setting `countValue` in the `count.subscribe` callback.
 
 Click the `stores.js` tab to see the definition of `count`. It's a _writable_ store, which means it has `set` and `update` methods in addition to `subscribe`.
+=======
+Svelte에서는 *stores*로 이 작업을 수행합니다. 스토어는 단순히 스토어 값이 변경될 때마다 관심 있는 당사자에게 알림을 제공하는 '구독' 메서드가 있는 객체입니다. `App.svelte`에서 `count`는 저장소이고 `count.subscribe` 콜백에서 `countValue`를 설정합니다.
 
-Now go to the `Incrementer.svelte` tab so that we can wire up the `+` button:
+`count`의 정의를 보려면 `stores.js` 탭을 클릭하십시오. 이것은 *쓰기 가능한* 저장소입니다. 즉, `subscribe` 외에도 `set` 및 `update` 메소드가 있습니다.
+>>>>>>> Stashed changes
+
+이제 `Incrementer.svelte` 탭으로 이동하여 `+` 버튼을 연결할 수 있습니다.
 
 ```js
 function increment() {
@@ -16,9 +22,9 @@ function increment() {
 }
 ```
 
-Clicking the `+` button should now update the count. Do the inverse for `Decrementer.svelte`.
+이제 `+` 버튼을 클릭하면 카운트가 업데이트됩니다. `Decrementer.svelte`에 대해 역으로 수행합니다.
 
-Finally, in `Resetter.svelte`, implement `reset`:
+마지막으로 `Resetter.svelte`에서 `reset`을 구현합니다.
 
 ```js
 function reset() {

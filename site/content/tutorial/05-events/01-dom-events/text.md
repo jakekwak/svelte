@@ -2,7 +2,7 @@
 title: DOM events
 ---
 
-As we've briefly seen already, you can listen to any event on an element with the `on:` directive:
+이미 간략하게 살펴본 것처럼 `on:` 지시문을 사용하여 요소의 모든 이벤트를 수신할 수 있습니다.
 
 ```svelte
 <div on:mousemove={handleMousemove}>

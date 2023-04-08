@@ -2,9 +2,15 @@
 title: Slot props
 ---
 
+<<<<<<< Updated upstream
 In this app, we have a `<Hoverable>` component that tracks whether the mouse is currently over it. It needs to pass that data _back_ to the parent component, so that we can update the slotted contents.
 
 For this, we use _slot props_. In `Hoverable.svelte`, pass the `hovering` value into the slot:
+=======
+이 앱에는 마우스가 현재 위에 있는지 추적하는 `<Hoverable>` 구성 요소가 있습니다. 슬롯 콘텐츠를 업데이트할 수 있도록 해당 데이터를 상위 구성 요소로 *다시* 전달해야 합니다.
+
+이를 위해 *슬롯 소품*을 사용합니다. `Hoverable.svelte`에서 `hovering` 값을 슬롯에 전달합니다.
+>>>>>>> Stashed changes
 
 <!-- prettier-ignore -->
 ```svelte
@@ -13,9 +19,9 @@ For this, we use _slot props_. In `Hoverable.svelte`, pass the `hovering` value 
 </div>
 ```
 
-> Remember you can also use the `{hovering}` shorthand, if you prefer.
+> 원하는 경우 `{hovering}` 축약형을 사용할 수도 있습니다.
 
-Then, to expose `hovering` to the contents of the `<Hoverable>` component, we use the `let` directive:
+그런 다음 `<Hoverable>` 구성 요소의 내용에 `hovering`을 노출하기 위해 `let` 지시문을 사용합니다.
 
 <!-- prettier-ignore -->
 ```svelte
@@ -30,7 +36,7 @@ Then, to expose `hovering` to the contents of the `<Hoverable>` component, we us
 </Hoverable>
 ```
 
-You can rename the variable, if you want — let's call it `active` in the parent component:
+원하는 경우 변수의 이름을 바꿀 수 있습니다. 상위 구성 요소에서 `active`라고 부르겠습니다.
 
 ```svelte
 <Hoverable let:hovering={active}>
@@ -44,6 +50,6 @@ You can rename the variable, if you want — let's call it `active` in the paren
 </Hoverable>
 ```
 
-You can have as many of these components as you like, and the slotted props will remain local to the component where they're declared.
+원하는 만큼 이러한 구성 요소를 가질 수 있으며 슬롯이 있는 소품은 선언된 구성 요소에 대해 로컬로 유지됩니다.
 
-> Named slots can also have props; use the `let` directive on an element with a `slot="..."` attribute, instead of on the component itself.
+> 명명된 슬롯에는 소품도 있을 수 있습니다. 컴포넌트 자체가 아닌 `slot="..."` 속성이 있는 요소에 `let` 지시문을 사용하십시오.

@@ -2,7 +2,7 @@
 title: Slots
 ---
 
-Just like elements can have children...
+요소가 자식을 가질 수 있는 것처럼...
 
 ```svelte
 <div>
@@ -10,7 +10,7 @@ Just like elements can have children...
 </div>
 ```
 
-...so can components. Before a component can accept children, though, it needs to know where to put them. We do this with the `<slot>` element. Put this inside `Box.svelte`:
+...구성 요소도 마찬가지입니다. 구성 요소가 자식을 수락하려면 먼저 자식을 어디에 둘지 알아야 합니다. `<slot>` 요소로 이 작업을 수행합니다. 이것을 `Box.svelte` 안에 넣으십시오:
 
 ```svelte
 <div class="box">
@@ -18,7 +18,7 @@ Just like elements can have children...
 </div>
 ```
 
-You can now put things in the box:
+이제 상자에 물건을 넣을 수 있습니다.
 
 ```svelte
 <Box>

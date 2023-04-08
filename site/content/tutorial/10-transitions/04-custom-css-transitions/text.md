@@ -2,7 +2,7 @@
 title: Custom CSS transitions
 ---
 
-The `svelte/transition` module has a handful of built-in transitions, but it's very easy to create your own. By way of example, this is the source of the `fade` transition:
+`svelte/transition` 모듈에는 몇 가지 기본 제공 전환이 있지만 자신만의 전환을 만드는 것은 매우 쉽습니다. 예를 들어, 이것은 `fade` 전환의 소스입니다.
 
 ```js
 function fade(node, { delay = 0, duration = 400 }) {
@@ -16,19 +16,31 @@ function fade(node, { delay = 0, duration = 400 }) {
 }
 ```
 
-The function takes two arguments — the node to which the transition is applied, and any parameters that were passed in — and returns a transition object which can have the following properties:
+이 함수는 두 개의 인수(전환이 적용되는 노드 및 전달된 모든 매개변수)를 사용하고 다음 속성을 가질 수 있는 전환 개체를 반환합니다.
 
+<<<<<<< Updated upstream
 - `delay` — milliseconds before the transition begins
 - `duration` — length of the transition in milliseconds
 - `easing` — a `p => t` easing function (see the chapter on [tweening](/tutorial/tweened))
 - `css` — a `(t, u) => css` function, where `u === 1 - t`
 - `tick` — a `(t, u) => {...}` function that has some effect on the node
+=======
+* `delay` — 전환이 시작되기 전 밀리초
+* `duration` — 전환 시간(밀리초)
+* `easing` — `p => t` 여유 함수([tweening](/tutorial/tweened) 장 참조)
+* `css` — `(t, u) => css` 함수, 여기서 `u === 1 - t`
+* `tick` — 노드에 영향을 미치는 `(t, u) => {...}` 함수
+>>>>>>> Stashed changes
 
-The `t` value is `0` at the beginning of an intro or the end of an outro, and `1` at the end of an intro or beginning of an outro.
+'t' 값은 인트로 시작 또는 아웃트로 종료 시 '0'이고 인트로 종료 또는 아웃트로 시작 시 '1'입니다.
 
+<<<<<<< Updated upstream
 Most of the time you should return the `css` property and _not_ the `tick` property, as CSS animations run off the main thread to prevent jank where possible. Svelte 'simulates' the transition and constructs a CSS animation, then lets it run.
+=======
+대부분의 경우 `tick` 속성이 *아닌* `css` 속성을 반환해야 합니다. 가능한 경우 버벅거림을 방지하기 위해 CSS 애니메이션이 기본 스레드에서 실행되기 때문입니다. Svelte는 전환을 '시뮬레이션'하고 CSS 애니메이션을 구성한 다음 실행합니다.
+>>>>>>> Stashed changes
 
-For example, the `fade` transition generates a CSS animation somewhat like this:
+예를 들어 `fade` 전환은 다음과 같은 CSS 애니메이션을 생성합니다.
 
 ```css
 0% {
@@ -46,7 +58,7 @@ For example, the `fade` transition generates a CSS animation somewhat like this:
 }
 ```
 
-We can get a lot more creative though. Let's make something truly gratuitous:
+하지만 우리는 훨씬 더 창의적일 수 있습니다. 진정으로 불필요한 것을 만들어 봅시다.
 
 ```svelte
 <script>
@@ -74,4 +86,4 @@ We can get a lot more creative though. Let's make something truly gratuitous:
 </script>
 ```
 
-Remember: with great power comes great responsibility.
+기억하십시오: 큰 힘에는 큰 책임이 따릅니다.

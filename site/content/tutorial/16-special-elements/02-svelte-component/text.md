@@ -2,7 +2,7 @@
 title: <svelte:component>
 ---
 
-A component can change its category altogether with `<svelte:component>`. Instead of a sequence of `if` blocks...
+구성 요소는 `<svelte:component>`를 사용하여 해당 범주를 모두 변경할 수 있습니다. 일련의 `if` 블록 대신...
 
 ```svelte
 {#if selected.color === 'red'}
@@ -14,10 +14,14 @@ A component can change its category altogether with `<svelte:component>`. Instea
 {/if}
 ```
 
-...we can have a single dynamic component:
+...단일 동적 구성 요소를 가질 수 있습니다.
 
 ```svelte
 <svelte:component this={selected.component} />
 ```
 
+<<<<<<< Updated upstream
 The `this` value can be any component constructor, or a falsy value — if it's falsy, no component is rendered.
+=======
+`this` 값은 구성 요소 생성자 또는 거짓 값일 수 있습니다 — 거짓이면 구성 요소가 렌더링되지 않습니다.
+>>>>>>> Stashed changes

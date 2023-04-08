@@ -2,9 +2,9 @@
 title: DOM event forwarding
 ---
 
-Event forwarding works for DOM events too.
+이벤트 전달은 DOM 이벤트에도 적용됩니다.
 
-We want to get notified of clicks on our `<CustomButton>` — to do that, we just need to forward `click` events on the `<button>` element in `CustomButton.svelte`:
+`<CustomButton>`에 대한 클릭에 대한 알림을 받으려면 `CustomButton.svelte`의 `<button>` 요소에 대한 `click` 이벤트를 전달하기만 하면 됩니다.
 
 ```svelte
 <button on:click> Click me </button>

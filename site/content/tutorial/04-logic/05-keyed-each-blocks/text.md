@@ -2,13 +2,19 @@
 title: Keyed each blocks
 ---
 
+<<<<<<< Updated upstream
 By default, when you modify the value of an `each` block, it will add and remove items at the _end_ of the block, and update any values that have changed. That might not be what you want.
 
 It's easier to show why than to explain. Click to expand the `Console`, then click the 'Remove first thing' button a few times, and notice what happens: it does not remove the first `<Thing>` component, but rather the _last_ DOM node. Then it updates the `name` value in the remaining DOM nodes, but not the emoji.
+=======
+기본적으로 `each` 블록의 값을 수정하면 블록 *끝*에서 항목을 추가 및 제거하고 변경된 모든 값을 업데이트합니다. 그것은 당신이 원하는 것이 아닐 수도 있습니다.
 
-Instead, we'd like to remove only the first `<Thing>` component and its DOM node, and leave the others unaffected.
+이유를 설명하는 것보다 보여주는 것이 더 쉽습니다. `Console`을 클릭하여 확장한 다음 'Remove first thing' 버튼을 몇 번 클릭하면 어떤 일이 발생하는지 확인하십시오. 첫 번째 `<Thing>` 구성 요소가 제거되지 않고 *마지막* DOM 노드가 제거됩니다. 그런 다음 나머지 DOM 노드에서 `name` 값을 업데이트하지만 이모티콘은 업데이트하지 않습니다.
+>>>>>>> Stashed changes
 
-To do that, we specify a unique identifier (or "key") for the `each` block:
+대신 첫 번째 `<Thing>` 구성 요소와 해당 DOM 노드만 제거하고 다른 구성 요소는 그대로 두려고 합니다.
+
+이를 위해 `each` 블록에 대한 고유 식별자(또는 "키")를 지정합니다.
 
 ```svelte
 {#each things as thing (thing.id)}
@@ -16,6 +22,10 @@ To do that, we specify a unique identifier (or "key") for the `each` block:
 {/each}
 ```
 
+<<<<<<< Updated upstream
 Here, `(thing.id)` is the _key_, which tells Svelte how to figure out which DOM node to change when the component updates.
+=======
+여기서 `(thing.id)`는 구성 요소가 업데이트될 때 변경할 DOM 노드를 파악하는 방법을 Svelte에 알려주는 *키*입니다.
+>>>>>>> Stashed changes
 
-> You can use any object as the key, as Svelte uses a `Map` internally — in other words you could do `(thing)` instead of `(thing.id)`. Using a string or number is generally safer, however, since it means identity persists without referential equality, for example when updating with fresh data from an API server.
+> Svelte는 내부적으로 `Map`을 사용하므로 모든 개체를 키로 사용할 수 있습니다. 즉 `(thing.id)` 대신 `(thing)`을 사용할 수 있습니다. 그러나 일반적으로 문자열이나 숫자를 사용하는 것이 더 안전합니다. 예를 들어 API 서버에서 최신 데이터로 업데이트할 때 ID가 참조 동등성 없이 지속됨을 의미하기 때문입니다.

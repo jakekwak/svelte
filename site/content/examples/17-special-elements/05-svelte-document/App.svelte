@@ -1,6 +1,5 @@
 <script>
 	let selection = '';
-
 	const handleSelectionChange = (e) => selection = document.getSelection();
 </script>
 

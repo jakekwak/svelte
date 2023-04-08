@@ -2,9 +2,9 @@
 title: Select multiple
 ---
 
-A select can have a `multiple` attribute, in which case it will populate an array rather than selecting a single value.
+select는 `multiple` 속성을 가질 수 있으며, 이 경우 단일 값을 선택하는 대신 배열을 채웁니다.
 
-Returning to our [earlier ice cream example](/tutorial/group-inputs), we can replace the checkboxes with a `<select multiple>`:
+[이전 아이스크림 예](/tutorial/group-inputs)로 돌아가서 확인란을 `<select multiple>`으로 바꿀 수 있습니다.
 
 ```svelte
 <h2>Flavours</h2>
@@ -18,4 +18,4 @@ Returning to our [earlier ice cream example](/tutorial/group-inputs), we can rep
 </select>
 ```
 
-> Press and hold the `control` key (or the `command` key on MacOS) for selecting multiple options.
+> 여러 옵션을 선택하려면 `control` 키(또는 MacOS의 경우 `command` 키)를 길게 누릅니다.
