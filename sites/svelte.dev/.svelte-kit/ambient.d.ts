@@ -28,6 +28,7 @@
 declare module '$env/static/private' {
 	export const GITHUB_CLIENT_ID: string;
 	export const GITHUB_CLIENT_SECRET: string;
+	export const LOCAL_SVELTE_PATH: string;
 	export const SUPABASE_URL: string;
 	export const SUPABASE_KEY: string;
 	export const VITE_MAPBOX_ACCESS_TOKEN: string;
@@ -108,6 +109,7 @@ declare module '$env/dynamic/private' {
 	export const env: {
 		GITHUB_CLIENT_ID: string;
 		GITHUB_CLIENT_SECRET: string;
+		LOCAL_SVELTE_PATH: string;
 		SUPABASE_URL: string;
 		SUPABASE_KEY: string;
 		VITE_MAPBOX_ACCESS_TOKEN: string;
